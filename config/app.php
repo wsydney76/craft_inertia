@@ -30,8 +30,9 @@ return [
         'frontend' => AppModule::class
     ],
     'bootstrap' => [
-       'main',
-       'inertia'
+        'main',
+        'inertia',
+        'frontend'
     ]
     /*'components' => [
         'cache' => [
