@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5bc2bab3879e77c85a2611b753f273ab",
+    "content-hash": "47cf09ac0e81bf894a3257c1fa7cb335",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -5519,16 +5519,16 @@
         },
         {
             "name": "vaersaagod/matrixmate",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vaersaagod/matrixmate.git",
-                "reference": "f998366c9bc5ee8751b24ae1236e0a6569dd080d"
+                "reference": "35d212ff7715ffd11e5761066ac5f530980ff10a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vaersaagod/matrixmate/zipball/f998366c9bc5ee8751b24ae1236e0a6569dd080d",
-                "reference": "f998366c9bc5ee8751b24ae1236e0a6569dd080d",
+                "url": "https://api.github.com/repos/vaersaagod/matrixmate/zipball/35d212ff7715ffd11e5761066ac5f530980ff10a",
+                "reference": "35d212ff7715ffd11e5761066ac5f530980ff10a",
                 "shasum": ""
             },
             "require": {
@@ -5574,9 +5574,9 @@
             "support": {
                 "docs": "https://github.com/vaersaagod/matrixmate/blob/master/README.md",
                 "issues": "https://github.com/vaersaagod/matrixmate/issues",
-                "source": "https://github.com/vaersaagod/matrixmate/tree/v2.0.1"
+                "source": "https://github.com/vaersaagod/matrixmate/tree/v2.0.2"
             },
-            "time": "2022-05-07T16:50:15+00:00"
+            "time": "2022-06-22T11:32:38+00:00"
         },
         {
             "name": "voku/anti-xss",
