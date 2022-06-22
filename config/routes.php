@@ -20,8 +20,4 @@
 
 return [
     'graphql' => 'graphql/api',
-
-    '' => 'frontend/post/index',
-    'posts' => 'frontend/post/index',
-    'posts/<slug:[^\/]+>' => 'frontend/post/post',
 ];
