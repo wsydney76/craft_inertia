@@ -10,7 +10,7 @@ Vue.use(InertiaApp)
 Vue.use(PortalVue)
 Vue.use(VueMeta)
 
-InertiaProgress.init()
+// InertiaProgress.init()
 
 let app = document.getElementById('app')
 

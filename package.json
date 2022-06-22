@@ -11,7 +11,7 @@
     "dev": "webpack --config webpack.config.js",
     "watch": "webpack  --config webpack.config.js --watch",
     "prod": "webpack --config webpack.config.js --optimize-minimize --mode production",
-    "css-dev": "npx tailwindcss -i ./modules/frontend/src/css/app.css -o ./web/assets/inertia/css/app.css --watch",
+    "css-watch": "npx tailwindcss -i ./modules/frontend/src/css/app.css -o ./web/assets/inertia/css/app.css --watch",
     "css-prod": "npx tailwindcss -i ./modules/frontend/src/css/app.css -o ./web/assets/inertia/css/app.css --minify"
   },
   "author": "",

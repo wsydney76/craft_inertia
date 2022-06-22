@@ -16,8 +16,10 @@ class SharedDataFilter extends ActionFilter
           'mainNav' => [
               ['label' => 'Posts', 'url' => 'posts'],
               ['label' => 'Topics', 'url' => 'topics'],
+              ['label' => 'Contact', 'url' => 'contact'],
           ],
       ]);
+
       return true;
   }
 }
