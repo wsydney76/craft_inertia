@@ -1,0 +1,50 @@
+{
+    "name": "wsydney76/craft_inertia",
+    "version": "1.0.0",
+    "description": "Inertia proof of concept",
+    "license": "Unlicense",
+    "require": {
+        "craftcms/cms": "4.0.5",
+        "doublesecretagency/craft-cpcss": "2.5.0",
+        "fakerphp/faker": "^1.15",
+        "tebe/yii2-inertia": "^1.0",
+        "vaersaagod/matrixmate": "2.0.1",
+        "wsydney76/elementmap": "^4.0.6"
+    },
+    "require-dev": {
+        "craftcms/rector": "dev-main",
+        "yiisoft/yii2-shell": "^2.0.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "modules\\": "modules/",
+            "config\\": "config/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "8.0.2"
+        },
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php -r \"file_exists('config/Env.php') || copy('config/Env.php.example', 'config/Env.php');\""
+        ],
+        "pre-update-cmd": [
+            "@php craft off"
+        ],
+        "post-update-cmd": [
+            "@php craft clear-caches/all",
+            "@php craft migrate/all --interactive=0",
+            "@php craft on"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

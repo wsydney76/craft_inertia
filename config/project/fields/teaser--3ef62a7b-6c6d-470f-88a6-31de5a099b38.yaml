@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: f1d8d989-2bc0-4a0f-b58f-a348276a5596 # Content
+handle: teaser
+instructions: null
+name: Teaser
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: 60
+  code: false
+  columnType: string
+  initialRows: 4
+  multiline: false
+  placeholder: 'Short text'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: language
+type: craft\fields\PlainText

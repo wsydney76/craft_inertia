@@ -1,0 +1,33 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+#- Blitz cache rewrite for gzip files
+    RewriteCond %{DOCUMENT_ROOT}/cache/blitz/%{HTTP_HOST}/%{REQUEST_URI}/%{QUERY_STRING}/index.html.gz -s
+    RewriteCond %{HTTP:Accept-encoding} gzip
+    RewriteCond %{REQUEST_METHOD} GET
+    RewriteCond %{QUERY_STRING} !token= [NC]
+    RewriteRule .* /cache/blitz/%{HTTP_HOST}/%{REQUEST_URI}/%{QUERY_STRING}/index.html.gz [L]
+
+    #- AddEncoding allows you to have certain browsers uncompress information on the fly.
+    AddEncoding gzip .gz
+
+    #- Serve correct content types, and prevent mod_deflate double gzip.
+    RewriteRule \.html\.gz$ - [T=text/html,E=no-gzip:1]
+
+    #- Blitz cache rewrite
+    RewriteCond %{DOCUMENT_ROOT}/cache/blitz/%{HTTP_HOST}/%{REQUEST_URI}/%{QUERY_STRING}/index.html -s
+    RewriteCond %{REQUEST_METHOD} GET
+    RewriteCond %{QUERY_STRING} !token= [NC]
+    RewriteRule .* /cache/blitz/%{HTTP_HOST}/%{REQUEST_URI}/%{QUERY_STRING}/index.html [L]
+
+    # Custom cache rewrite
+    RewriteCond %{DOCUMENT_ROOT}/cache/%{REQUEST_URI}/%{QUERY_STRING}/index.html -s
+    RewriteCond %{REQUEST_METHOD} GET
+    RewriteRule .* /cache/%{REQUEST_URI}/%{QUERY_STRING}/index.html [L]
+
+    # Send would-be 404 requests to Craft
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !^/(favicon\.ico|apple-touch-icon.*\.png)$ [NC]
+    RewriteRule (.+) index.php?p=$1 [QSA,L]
+</IfModule>

@@ -1,0 +1,6 @@
+description: 'View the system when offline'
+handle: customer
+name: Customer
+permissions:
+  - accesssitewhensystemisoff
+  - 'assignusergroup:f8131459-0978-46ca-9cd2-9816c16a9a2f' # Customer

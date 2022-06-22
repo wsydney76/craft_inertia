@@ -1,0 +1,292 @@
+assets:
+  tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e # Temporary Uploads
+dateModified: 1655901884
+elementSources:
+  craft\elements\Asset:
+    -
+      heading: 'Site Assets'
+      type: heading
+    -
+      key: 'folder:1ed6e63a-2ac1-4d30-8f84-33691f8cfce9'
+      tableAttributes:
+        - filename
+        - imageSize
+        - dateModified
+        - link
+      type: native
+    -
+      key: 'folder:aeb0997a-c26e-4117-aa9d-e8ea41899b8a'
+      tableAttributes:
+        - provider
+        - filename
+        - dateModified
+        - link
+      type: native
+    -
+      heading: Downloads
+      type: heading
+    -
+      key: 'folder:cb66c102-078f-4bb8-8484-3155b2c23331'
+      tableAttributes:
+        - filename
+        - size
+        - kind
+        - dateModified
+        - link
+      type: native
+    -
+      heading: Internal
+      type: heading
+    -
+      key: 'folder:9e21c422-fa10-49ab-a4b8-a7c01234ad24'
+      tableAttributes:
+        - filename
+        - imageSize
+        - dateModified
+        - link
+      type: native
+    -
+      key: 'folder:415155de-8514-4092-870b-63e31b356ee7'
+      tableAttributes:
+        - filename
+        - imageSize
+        - dateModified
+      type: native
+  craft\elements\Entry:
+    -
+      key: '*'
+      tableAttributes:
+        - section
+        - postDate
+        - link
+      type: native
+    -
+      heading: Site
+      type: heading
+    -
+      key: singles
+      tableAttributes:
+        - drafts
+        - 'field:9a302fae-a3bf-4298-8a06-24f8c8f6f335' # Featured Image
+        - link
+      type: native
+    -
+      key: 'section:b72e838e-1018-4e20-a2d6-2cea3799d34f'
+      tableAttributes:
+        - 'field:9a302fae-a3bf-4298-8a06-24f8c8f6f335' # Featured Image
+        - 'field:3ef62a7b-6c6d-470f-88a6-31de5a099b38' # Teaser
+        - postDate
+        - link
+      type: native
+    -
+      key: 'section:09f97fdd-45fe-4221-982a-a2077c8460b1' # Page
+      tableAttributes:
+        - drafts
+        - hasProvisionalDraft
+        - 'field:9a302fae-a3bf-4298-8a06-24f8c8f6f335' # Featured Image
+        - 'field:3ef62a7b-6c6d-470f-88a6-31de5a099b38' # Teaser
+        - postDate
+        - link
+      type: native
+    -
+      key: 'section:0d69ffe4-360e-4d04-ac30-af0e4381b6ed' # Post
+      tableAttributes:
+        - drafts
+        - hasProvisionalDraft
+        - 'field:9a302fae-a3bf-4298-8a06-24f8c8f6f335' # Featured Image
+        - 'field:3ef62a7b-6c6d-470f-88a6-31de5a099b38' # Teaser
+        - author
+        - postDate
+        - link
+      type: native
+    -
+      heading: Categories
+      type: heading
+    -
+      key: 'section:338d4897-8545-48cd-bd31-951a6ed52197' # Topic
+      tableAttributes:
+        - drafts
+        - 'field:9a302fae-a3bf-4298-8a06-24f8c8f6f335' # Featured Image
+        - 'field:3ef62a7b-6c6d-470f-88a6-31de5a099b38' # Teaser
+        - author
+        - postDate
+        - link
+      type: native
+email:
+  fromEmail: $EMAIL_ADDRESS
+  fromName: $EMAIL_SENDER
+  replyToEmail: null
+  template: ''
+  transportSettings:
+    encryptionMethod: $SMTP_ENCRYPTION_METHOD
+    host: $SMTP_HOST
+    password: $SMTP_PASSWORD
+    port: $SMTP_PORT
+    timeout: '10'
+    useAuthentication: $SMTP_AUTHENTICATION
+    username: $SMTP_USER
+  transportType: craft\mail\transportadapters\Smtp
+fs:
+  documents:
+    hasUrls: true
+    name: Documents
+    settings:
+      path: '@webroot/documents'
+    type: craft\fs\Local
+    url: '@baseurl/documents'
+  embeds:
+    hasUrls: false
+    name: Embeds
+    settings:
+      path: '@root/volumes/embeds'
+    type: craft\fs\Local
+    url: null
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@webroot/images'
+    type: craft\fs\Local
+    url: '@baseurl/images'
+  temporaryUploads:
+    hasUrls: true
+    name: 'Temporary Uploads'
+    settings:
+      path: '@webroot/temporaryuploads'
+    type: craft\fs\Local
+    url: '@baseurl/temporaryuploads'
+  transformsFs:
+    hasUrls: true
+    name: 'Transforms Fs'
+    settings:
+      path: '@webroot/assets/transforms'
+    type: craft\fs\Local
+    url: '@web/assets/transforms'
+  userPhotos:
+    hasUrls: true
+    name: 'User Photos'
+    settings:
+      path: '@webroot/userphotos'
+    type: craft\fs\Local
+    url: '@baseurl/userphotos'
+meta:
+  __names__:
+    0a84fdb5-f68e-4e47-970c-48b16b0910ba: Quote # Quote
+    0d69ffe4-360e-4d04-ac30-af0e4381b6ed: Post # Post
+    1abbf886-1328-4ef8-b5a1-1e6bc5fbb69f: 'Gallery Full Height' # Gallery Full Height
+    1aec14fb-99b3-4e08-98c3-1294155e5bd3: Editors # Editors
+    1e98e314-dd2f-4a43-9eb0-158ed2daf9e3: 'Photo Thumbnail' # Photo Thumbnail
+    2a586bbf-019e-4c87-bc15-d0b5db0efc98: 'Site Icon' # Site Icon
+    2bc913cf-56f9-46a4-b12e-33cffaca01c8: 'Plain Text 1' # Plain Text 1
+    2c476892-24a5-43a5-ae3a-70f4609382e3: Home # Home
+    2f4c2da0-9bf2-47da-a2fb-b13bad08739c: Documents # Documents
+    3e04a640-3126-4284-b356-3b63c6349ffd: Button # Button
+    3ef62a7b-6c6d-470f-88a6-31de5a099b38: Teaser # Teaser
+    3f9c2f2a-8ab0-4aba-bf4e-02d5336d14c0: Copyright # Copyright
+    4d466365-d4d6-4da1-b35a-009a6fca474c: 'Public Schema' # Public Schema
+    4f4d2410-e8bd-4bef-9962-167fac851984: Features # Features
+    4fc4fb07-4172-499d-8f6f-7996fd942681: 'URL 1' # URL 1
+    6c2c7c89-c2ff-4ace-a3e6-aeddab27ab7b: Documents # Documents
+    6d263498-0b0f-4b80-ac04-958b449ac869: Heading # Heading
+    6e033437-688d-40c5-b0f3-fb19a4084bd2: Color1 # Color1
+    6e85df5a-9848-47e6-98f8-728b28c8f205: Gallery # Gallery
+    6f8ba6d7-ad49-44ed-8065-86f732f2367d: 'Assets 1' # Assets 1
+    06f1502a-0587-40a5-b935-7ce9909e2a38: 'Number 1' # Number 1
+    7a11b052-f8c9-46d7-8bb4-7c9a3916200c: Image # Image
+    7d7cf5ed-7c41-4d49-ba86-cef811f69683: Color # Color
+    8af41142-86a7-4e1c-870c-aab28c4a827b: 'Entries 1' # Entries 1
+    08fc32b6-7f51-4b0f-8921-5f6cbdad10e3: 'Drop Down' # Drop Down
+    9a302fae-a3bf-4298-8a06-24f8c8f6f335: 'Featured Image' # Featured Image
+    9b2aaaa8-c827-4881-955a-86f2df0ea79c: 'Related Entries' # Related Entries
+    09f97fdd-45fe-4221-982a-a2077c8460b1: Page # Page
+    15c0556c-f778-4258-ae84-ff8cef62b761: 'Footer Navigation' # Footer Navigation
+    25c13312-e79c-4f00-b607-88fab9e35920: __blank__ # __blank__
+    25fbe2f8-c1c3-4e3e-8a39-0b06a6392428: Images # Images
+    35c3b3f5-30e7-4780-9ae1-286ee8bd275e: 'Temporary Uploads' # Temporary Uploads
+    52c08922-d1fa-41a8-860e-df1c1318f96b: Image # Image
+    58b2e318-26cc-47b8-bee2-81369731d72f: 'Body Content' # Body Content
+    64c37a78-14f3-4dba-874a-4d4bdd5ba1ee: 'Site Name' # Site Name
+    70c1c09f-e41e-4275-9ce4-fe493b9fe72f: __blank__ # __blank__
+    71fd1263-a3ef-4a3a-bdfe-991ded81c27d: 'Alt Text' # Alt Text
+    72fdc33e-481f-40c0-80ad-c531e3a557c7: 'Site Logo' # Site Logo
+    81dfb777-1307-40c9-ad9a-7d84f1c835ed: DateTime2 # DateTime2
+    90b94f80-c868-4c22-8bda-3abd94d99530: 'Gallery Thumbnail' # Gallery Thumbnail
+    91e82c8e-91b5-456d-a06b-bd9e86bb5059: Entries # Entries
+    092a5942-4bd7-494b-aa19-3d10fb32cafe: 'Aria Label' # Aria Label
+    092d4c96-b172-45d5-92ab-d91c8b60a8a6: Date1 # Date1
+    97e0b749-86e3-49f1-918e-9b88758928f4: English # English
+    99cbe848-2d62-42d0-ad15-948062a7561f: 'User Photos' # User Photos
+    133bba22-df33-4432-a49f-198e9c071f22: Display # Display
+    338d4897-8545-48cd-bd31-951a6ed52197: Topic # Topic
+    358d0091-9ca8-450b-8029-6e2e93602cbe: Time1 # Time1
+    456a9705-858d-4729-aec1-4ebd31f9d11b: 'Multi Select 1' # Multi Select 1
+    490e288d-90ad-4b1b-abbf-b8fe175c7f22: 'Content Image' # Content Image
+    616bf759-9e78-4adc-a30d-fbe2216c26a3: 'Check Boxes 1' # Check Boxes 1
+    668f0fef-6d6e-49a4-a50b-a91d87ec5543: Heading # Heading
+    791f2374-f198-451d-892d-0ebc928aefac: 'Light Switch 1' # Light Switch 1
+    4230d05c-5e66-4718-8fa2-0371dc10d9cb: Display # Display
+    5376aba9-df1d-4ebf-b6d2-927c147e0f0c: 'Site Info' # Site Info
+    8136d7e9-1a74-464d-aef2-3a4f91a5cdda: Images # Images
+    29984fa1-b01d-42e8-80e8-6983cc5a498c: Entries # Entries
+    67843f2f-7ce9-4496-93de-ad560b889f89: 'Users 1' # Users 1
+    9824416f-f0bf-481a-91dc-b14b70dfab25: Photo # Photo
+    22733645-b85a-49e7-8c69-a5e02ec8993c: Images # Images
+    a6c330ac-aa61-44e4-a5fe-61b35e4eeb36: Display # Display
+    a6d13a9f-d4ed-41e5-be7f-c93dcb679633: Text # Text
+    ae7d91c8-8743-46bb-a954-438a27946b97: 'Primary Navigation' # Primary Navigation
+    b026d20d-f781-469f-8c4c-5f5c65c66027: Target # Target
+    b6d41688-97a9-4dc8-b5b0-34ced913037a: 'Radio 1' # Radio 1
+    b40dbfe9-2815-4f06-8ec3-c20f2a587460: DateTime1 # DateTime1
+    bad8f5ab-fcf4-4fec-9ade-7652b14f376e: Level # Level
+    bc485c8b-4a0c-4c30-816a-8bb295727b36: Text # Text
+    c4d63380-a55e-438d-9ec4-18f62fe8332b: 'Top Level Links' # Top Level Links
+    c7d0c14f-5533-4bdc-863d-cedbbb544960: Text # Text
+    c9b0dd19-d915-4588-9485-2c42e30bf384: Color # Color
+    c6943610-b0b4-4588-88b9-c13480f83557: Caption # Caption
+    cb1283e0-fe53-4c82-9ba4-8eada6d76a1f: 'Content Image Full Height' # Content Image Full Height
+    d7b42e42-18f7-4b59-a57e-c40b4d7766f7: 'Featured Image' # Featured Image
+    d34f3a99-7025-4a72-86aa-cb2ccaf92500: Date1 # Date1
+    d80ee1f4-e752-4e38-860a-c5f26790bf89: Caption # Caption
+    d420edab-c758-4dce-8b02-e17b23ed0e60: Attribution # Attribution
+    d90241f5-7ae6-4bad-a6ae-c8caa56979b3: Post # Post
+    de523b11-9903-415d-a140-fd5b18f5a28e: Sites # Sites
+    e0a78d92-d8fa-491c-89d5-1d976b4fb663: 'EMail 1' # EMail 1
+    e047f4d9-786a-4636-9295-401868163243: Gatsby # Gatsby
+    e4cf9f0d-54a6-4107-beac-daa51b8e5006: Topics # Topics
+    eafd7029-f75a-42a9-9a04-a69b931b4250: Home # Home
+    eb61a6f2-9d63-4730-8ccf-daebb6ba0824: __blank__ # __blank__
+    ec6b5c42-b633-4465-8f26-2d43d78befe8: Asset # Asset
+    efc1fd0a-3fd1-4379-84a0-e8cf931be331: Display # Display
+    f049bdd0-6f43-47c4-a14d-4e40b7bc84cb: Text # Text
+    f1d8d989-2bc0-4a0f-b58f-a348276a5596: Content # Content
+    f8d2f509-8906-46f9-959b-a2297e7f1abf: 'Site Navigation' # Site Navigation
+    f27f4038-975b-41d2-a58a-7e78ed2000f5: Features # Features
+    f90b9645-97c8-4969-b1ee-149e79a745e7: Topic # Topic
+    f93d0a69-cf0f-47c7-a17b-bb1070ce3df6: Page # Page
+    f7788f5b-48e2-448b-bf6d-1a854e4606b6: 'Drop Down 1' # Drop Down 1
+    f8131459-0978-46ca-9cd2-9816c16a9a2f: Customer # Customer
+    fa76440e-c84c-4d11-b665-375f32514aaa: Caption # Caption
+    fea375f0-9f46-4952-b272-2dcf42b0cce5: 'Site Info' # Site Info
+plugins:
+  cp-css:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+    settings:
+      additionalCss: "html,body {\r\n  font-size: 15px;\r\n}\r\ninput.text, textarea.text, .text > input, .text > textarea, table.editable textarea, .selectize-text > .selectize-control > .selectize-input {\r\n  font-size: 16px;\r\n}\r\n#global-sidebar {\r\n background-color: #13254B;\r\n}\r\n\r\n\r\n#main-form h2 {\r\n\tfont-size:17px;\r\n}\r\n\r\n.sidebar .heading span {\r\n  color: #264a6c;\r\n  font-size: 14px;\r\n  letter-spacing: 1px\r\n}\r\n\r\n.blocktype {\r\n\tfont-weight: bold;\r\n}\r\n"
+      cssFile: ''
+  elementmap:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  matrixmate:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: $SYSTEM_NAME
+  retryDuration: 30
+  schemaVersion: 4.0.0.9
+  timeZone: $SYSTEM_TIMEZONE

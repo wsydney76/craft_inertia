@@ -1,0 +1,9 @@
+/.idea
+/templates/test
+/node_modules
+/vendor
+/web/cache
+/web/cpresources
+/web/assets/transforms
+/config/Env.php
+/snapshot

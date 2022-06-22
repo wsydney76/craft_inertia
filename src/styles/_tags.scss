@@ -1,0 +1,42 @@
+h1 {
+  @apply text-4xl;
+}
+
+h2, h3, h4
+{
+  @apply mb-4 font-serif;
+}
+
+h2 {
+  @apply text-3xl;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+h4 {
+  @apply text-xl;
+}
+
+[type='text'],
+[type='email'],
+[type='url'],
+[type='password'],
+[type='number'],
+[type='date'],
+[type='datetime-local'],
+[type='month'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='week'],
+[multiple],
+textarea,
+select {
+  @apply w-full focus:shadow-xl focus:ring-1 focus:ring-primary;
+}
+
+[type='submit'] {
+  @apply cursor-pointer bg-primary text-white px-4 py-2 hover:bg-primary-alt;
+}

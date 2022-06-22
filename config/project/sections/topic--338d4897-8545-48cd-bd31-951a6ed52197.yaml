@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: topic
+name: Topic
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - refresh
+        - '1'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  97e0b749-86e3-49f1-918e-9b88758928f4: # English
+    enabledByDefault: true
+    hasUrls: true
+    template: _sections/topic
+    uriFormat: 'topic/{slug}'
+type: channel

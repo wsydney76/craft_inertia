@@ -1,0 +1,93 @@
+description: null
+handle: editors
+name: Editors
+permissions:
+  - accesscp
+  - accesscpwhensystemisoff
+  - accessplugin-work
+  - accesssitewhensystemisoff
+  - 'assignusergroup:1aec14fb-99b3-4e08-98c3-1294155e5bd3' # Editors
+  - 'createentries:09f97fdd-45fe-4221-982a-a2077c8460b1' # Page
+  - 'createentries:0d69ffe4-360e-4d04-ac30-af0e4381b6ed' # Post
+  - 'createentries:338d4897-8545-48cd-bd31-951a6ed52197' # Topic
+  - 'createfolders:2f4c2da0-9bf2-47da-a2fb-b13bad08739c' # Documents
+  - 'createfolders:35c3b3f5-30e7-4780-9ae1-286ee8bd275e' # Temporary Uploads
+  - 'createfolders:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
+  - 'createfolders:99cbe848-2d62-42d0-ad15-948062a7561f' # User Photos
+  - 'createfolders:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+  - 'deleteassets:2f4c2da0-9bf2-47da-a2fb-b13bad08739c' # Documents
+  - 'deleteassets:35c3b3f5-30e7-4780-9ae1-286ee8bd275e' # Temporary Uploads
+  - 'deleteassets:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
+  - 'deleteassets:99cbe848-2d62-42d0-ad15-948062a7561f' # User Photos
+  - 'deleteassets:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+  - 'deleteentries:09f97fdd-45fe-4221-982a-a2077c8460b1' # Page
+  - 'deleteentries:0d69ffe4-360e-4d04-ac30-af0e4381b6ed' # Post
+  - 'deleteentries:338d4897-8545-48cd-bd31-951a6ed52197' # Topic
+  - 'deletepeerassets:2f4c2da0-9bf2-47da-a2fb-b13bad08739c' # Documents
+  - 'deletepeerassets:35c3b3f5-30e7-4780-9ae1-286ee8bd275e' # Temporary Uploads
+  - 'deletepeerassets:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
+  - 'deletepeerassets:99cbe848-2d62-42d0-ad15-948062a7561f' # User Photos
+  - 'deletepeerassets:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+  - 'deletepeerentries:0d69ffe4-360e-4d04-ac30-af0e4381b6ed' # Post
+  - 'deletepeerentries:338d4897-8545-48cd-bd31-951a6ed52197' # Topic
+  - 'deletepeerentrydrafts:0d69ffe4-360e-4d04-ac30-af0e4381b6ed' # Post
+  - 'deletepeerentrydrafts:338d4897-8545-48cd-bd31-951a6ed52197' # Topic
+  - 'editimages:2f4c2da0-9bf2-47da-a2fb-b13bad08739c' # Documents
+  - 'editimages:35c3b3f5-30e7-4780-9ae1-286ee8bd275e' # Temporary Uploads
+  - 'editimages:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
+  - 'editimages:99cbe848-2d62-42d0-ad15-948062a7561f' # User Photos
+  - 'editimages:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+  - 'editpeerimages:2f4c2da0-9bf2-47da-a2fb-b13bad08739c' # Documents
+  - 'editpeerimages:35c3b3f5-30e7-4780-9ae1-286ee8bd275e' # Temporary Uploads
+  - 'editpeerimages:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
+  - 'editpeerimages:99cbe848-2d62-42d0-ad15-948062a7561f' # User Photos
+  - 'editpeerimages:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+  - 'editsite:97e0b749-86e3-49f1-918e-9b88758928f4' # English
+  - 'editsite:bbbb120d-5d71-4e7c-a164-487e401c4f2c'
+  - 'replacefiles:2f4c2da0-9bf2-47da-a2fb-b13bad08739c' # Documents
+  - 'replacefiles:35c3b3f5-30e7-4780-9ae1-286ee8bd275e' # Temporary Uploads
+  - 'replacefiles:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
+  - 'replacefiles:99cbe848-2d62-42d0-ad15-948062a7561f' # User Photos
+  - 'replacefiles:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+  - 'replacepeerfiles:2f4c2da0-9bf2-47da-a2fb-b13bad08739c' # Documents
+  - 'replacepeerfiles:35c3b3f5-30e7-4780-9ae1-286ee8bd275e' # Temporary Uploads
+  - 'replacepeerfiles:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
+  - 'replacepeerfiles:99cbe848-2d62-42d0-ad15-948062a7561f' # User Photos
+  - 'replacepeerfiles:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+  - 'saveassets:2f4c2da0-9bf2-47da-a2fb-b13bad08739c' # Documents
+  - 'saveassets:35c3b3f5-30e7-4780-9ae1-286ee8bd275e' # Temporary Uploads
+  - 'saveassets:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
+  - 'saveassets:99cbe848-2d62-42d0-ad15-948062a7561f' # User Photos
+  - 'saveassets:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+  - 'saveentries:09f97fdd-45fe-4221-982a-a2077c8460b1' # Page
+  - 'saveentries:0d69ffe4-360e-4d04-ac30-af0e4381b6ed' # Post
+  - 'saveentries:338d4897-8545-48cd-bd31-951a6ed52197' # Topic
+  - 'savepeerassets:2f4c2da0-9bf2-47da-a2fb-b13bad08739c' # Documents
+  - 'savepeerassets:35c3b3f5-30e7-4780-9ae1-286ee8bd275e' # Temporary Uploads
+  - 'savepeerassets:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
+  - 'savepeerassets:99cbe848-2d62-42d0-ad15-948062a7561f' # User Photos
+  - 'savepeerassets:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+  - 'savepeerentries:0d69ffe4-360e-4d04-ac30-af0e4381b6ed' # Post
+  - 'savepeerentries:338d4897-8545-48cd-bd31-951a6ed52197' # Topic
+  - 'savepeerentrydrafts:0d69ffe4-360e-4d04-ac30-af0e4381b6ed' # Post
+  - 'savepeerentrydrafts:338d4897-8545-48cd-bd31-951a6ed52197' # Topic
+  - transferprovisionaldrafts
+  - 'viewassets:2f4c2da0-9bf2-47da-a2fb-b13bad08739c' # Documents
+  - 'viewassets:35c3b3f5-30e7-4780-9ae1-286ee8bd275e' # Temporary Uploads
+  - 'viewassets:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
+  - 'viewassets:99cbe848-2d62-42d0-ad15-948062a7561f' # User Photos
+  - 'viewassets:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+  - 'viewentries:09f97fdd-45fe-4221-982a-a2077c8460b1' # Page
+  - 'viewentries:0d69ffe4-360e-4d04-ac30-af0e4381b6ed' # Post
+  - 'viewentries:338d4897-8545-48cd-bd31-951a6ed52197' # Topic
+  - 'viewpeerassets:2f4c2da0-9bf2-47da-a2fb-b13bad08739c' # Documents
+  - 'viewpeerassets:35c3b3f5-30e7-4780-9ae1-286ee8bd275e' # Temporary Uploads
+  - 'viewpeerassets:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
+  - 'viewpeerassets:99cbe848-2d62-42d0-ad15-948062a7561f' # User Photos
+  - 'viewpeerassets:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
+  - 'viewpeerentries:09f97fdd-45fe-4221-982a-a2077c8460b1' # Page
+  - 'viewpeerentries:0d69ffe4-360e-4d04-ac30-af0e4381b6ed' # Post
+  - 'viewpeerentries:338d4897-8545-48cd-bd31-951a6ed52197' # Topic
+  - 'viewpeerentrydrafts:0d69ffe4-360e-4d04-ac30-af0e4381b6ed' # Post
+  - 'viewpeerentrydrafts:338d4897-8545-48cd-bd31-951a6ed52197' # Topic
+  - viewpeerprovisionaldrafts

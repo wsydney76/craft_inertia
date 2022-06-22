@@ -1,0 +1,71 @@
+field: 58b2e318-26cc-47b8-bee2-81369731d72f # Body Content
+fieldLayouts:
+  34d4bac1-c414-452a-adfc-eb21c10b1fc4:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 25fbe2f8-c1c3-4e3e-8a39-0b06a6392428 # Images
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3f524650-9059-4756-9803-da3f77b564fd
+            warning: null
+            width: 100
+        name: Content
+        uid: 16abf392-fd08-4a52-af75-4e23d7fcd089
+fields:
+  25fbe2f8-c1c3-4e3e-8a39-0b06a6392428: # Images
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: images
+    instructions: null
+    name: Images
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: null
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add an image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources:
+        - 'volume:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: gallery
+name: Gallery
+sortOrder: 4

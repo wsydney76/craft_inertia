@@ -1,0 +1,77 @@
+fieldLayouts:
+  ee443750-cc68-4ccf-904c-8348859bbe73:
+    tabs:
+      -
+        elements:
+          -
+            heading: Header
+            type: craft\fieldlayoutelements\Heading
+            uid: e541ba07-3656-406a-b530-d3bf83f4dea0
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 253e13c2-afcd-4546-af78-139def199cbd
+            warning: null
+            width: 100
+          -
+            fieldUid: 9a302fae-a3bf-4298-8a06-24f8c8f6f335 # Featured Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3a8e174c-dc9a-421f-8aa8-acda656767ee
+            warning: null
+            width: 25
+          -
+            fieldUid: 3ef62a7b-6c6d-470f-88a6-31de5a099b38 # Teaser
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3715da6e-27c4-4737-8f05-d75d81f66181
+            warning: null
+            width: 75
+          -
+            heading: Content
+            type: craft\fieldlayoutelements\Heading
+            uid: b6ff38da-beec-42b0-a049-9b9216974bbc
+          -
+            fieldUid: 58b2e318-26cc-47b8-bee2-81369731d72f # Body Content
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 336a93a2-e1a2-4cef-8438-ae83a1fe46d0
+            warning: null
+            width: 100
+        name: Content
+        uid: 7a634d48-49cd-40b8-ae02-e6844ec03243
+handle: topic
+hasTitleField: true
+name: Topic
+section: 338d4897-8545-48cd-bd31-951a6ed52197 # Topic
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: language

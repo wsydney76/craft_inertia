@@ -1,0 +1,31 @@
+isPublic: false
+name: Gatsby
+scope:
+  - 'sections.1d3e1ff8-2adc-4e4d-8796-e277ee738837:read'
+  - 'entrytypes.935c2010-5ffe-45c3-9d2a-acef8f654b9c:read'
+  - 'sections.2c476892-24a5-43a5-ae3a-70f4609382e3:read' # Home
+  - 'entrytypes.eafd7029-f75a-42a9-9a04-a69b931b4250:read' # Home
+  - 'sections.09f97fdd-45fe-4221-982a-a2077c8460b1:read' # Page
+  - 'entrytypes.f93d0a69-cf0f-47c7-a17b-bb1070ce3df6:read' # Page
+  - 'sections.0d69ffe4-360e-4d04-ac30-af0e4381b6ed:read' # Post
+  - 'entrytypes.d90241f5-7ae6-4bad-a6ae-c8caa56979b3:read' # Post
+  - 'sections.3792f859-a1b5-44b2-a5d5-4f3df611e91f:read'
+  - 'entrytypes.686b63da-45f5-4daf-b050-511c5c6e73a7:read'
+  - 'sections.68e35a0b-3321-46c1-8595-341acf1a4aa6:read'
+  - 'entrytypes.51e9af2a-9f55-4b7f-9f42-f1d9832cc23c:read'
+  - 'sections.338d4897-8545-48cd-bd31-951a6ed52197:read' # Topic
+  - 'entrytypes.f90b9645-97c8-4969-b1ee-149e79a745e7:read' # Topic
+  - 'sections.bda0f4f2-6388-4569-99b9-8f89727f61ca:read'
+  - 'entrytypes.c70f1891-1a5f-40de-b80f-fa25adec5c26:read'
+  - 'volumes.8136d7e9-1a74-464d-aef2-3a4f91a5cdda:read' # Images
+  - 'volumes.99cbe848-2d62-42d0-ad15-948062a7561f:read' # User Photos
+  - 'volumes.35c3b3f5-30e7-4780-9ae1-286ee8bd275e:read' # Temporary Uploads
+  - 'volumes.cbbf12d2-97db-4750-8f2d-ea5a5ca1f975:read'
+  - 'volumes.2f4c2da0-9bf2-47da-a2fb-b13bad08739c:read' # Documents
+  - 'globalsets.5376aba9-df1d-4ebf-b6d2-927c147e0f0c:read' # Site Info
+  - 'globalsets.f8d2f509-8906-46f9-959b-a2297e7f1abf:read' # Site Navigation
+  - 'gatsby:read'
+  - 'elements.drafts:read'
+  - 'elements.revisions:read'
+  - 'elements.inactive:read'
+  - 'sites.97e0b749-86e3-49f1-918e-9b88758928f4:read' # English

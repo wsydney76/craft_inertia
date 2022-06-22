@@ -1,0 +1,9 @@
+format: null
+handle: photoThumbnail
+height: 60
+interlace: none
+mode: crop
+name: 'Photo Thumbnail'
+position: center-center
+quality: null
+width: 60

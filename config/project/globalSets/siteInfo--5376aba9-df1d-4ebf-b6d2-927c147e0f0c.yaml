@@ -1,0 +1,60 @@
+fieldLayouts:
+  958d9c22-9855-40ef-b9cf-16af08de416b:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 64c37a78-14f3-4dba-874a-4d4bdd5ba1ee # Site Name
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0d1aeb77-5456-40ef-b642-421511d21837
+            warning: null
+            width: 100
+          -
+            fieldUid: 9a302fae-a3bf-4298-8a06-24f8c8f6f335 # Featured Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 37c5b62c-c6be-4188-a944-5f7b7a57b92a
+            warning: null
+            width: 25
+          -
+            fieldUid: 72fdc33e-481f-40c0-80ad-c531e3a557c7 # Site Logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dc40f882-1717-41bc-a0d6-1028622aa516
+            warning: null
+            width: 25
+          -
+            fieldUid: 2a586bbf-019e-4c87-bc15-d0b5db0efc98 # Site Icon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7eef2871-9833-4a45-8cbc-74d27ba03685
+            warning: null
+            width: 25
+          -
+            fieldUid: 3f9c2f2a-8ab0-4aba-bf4e-02d5336d14c0 # Copyright
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d582eb4d-6ee6-4eb5-a6f8-c110d6b69fa7
+            warning: null
+            width: 100
+        name: 'Site Info'
+        uid: 29cb568f-4c66-4a24-9262-07552e72ab2e
+handle: siteInfo
+name: 'Site Info'
+sortOrder: 2
