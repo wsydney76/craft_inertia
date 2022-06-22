@@ -1,21 +1,26 @@
 <template>
 
     <div>
-        <div v-if="notice" class="text-green-700 font-bold mb-4">
-            {{ notice }}
-        </div>
+        <form @submit.prevent="submit">
+            <div class="flex flex-col space-y-4">
+                <!-- TODO: implement and check proper CSRF protection -->
+                <input type="hidden" v-model="form._token">
 
-        <div v-if="error" class="text-red-700 font-bold mb-4">
-            {{ error }}
-        </div>
+                <input type="text" class="bg-gray-50 border border-gray-500 p-2 w-1/2" v-model="form.fullName"
+                       placeholder="Name">
 
-        <div class="flex flex-col space-y-4">
-            <input type="text" name="fullName" class="border border-gray-500 p-2 w-1/2" :value="fullName" placeholder="Name">
+                <input type="text" class="bg-gray-50 border border-gray-500 p-2 w-1/2" v-model="form.email"
+                       placeholder="EMail">
 
-            <input type="text" name="email" class="border border-gray-500 p-2 w-1/2" :value="email" placeholder="EMail">
+                <textarea rows="6" class="bg-gray-50 border border-gray-600 p-2 w-1/2" placeholder="Message"
+                          v-model="form.text"></textarea>
+            </div>
 
-            <textarea name="message" rows="8" class="border border-gray-600 p-2 w-1/2" placeholder="Message">{{ message }}</textarea>
-        </div>
+            <div class="mt-8">
+                <button class="bg-brand-800 text-white px-4 py-2" type="submit">Send Message</button>
+            </div>
+
+        </form>
     </div>
 </template>
 
@@ -29,11 +34,24 @@ export default {
     },
     layout: Layout,
     props: {
-        fullName: String,
-        email: String,
-        message: String,
-        notice: String,
-        error: String
+        message: Object
+    },
+
+    data() {
+        return {
+            form: {
+                fullName: this.message.fullName,
+                email: this.message.email,
+                text: this.message.text,
+                _token: this.message.token // TODO: implement and check proper CSRF protections
+            }
+        }
+    },
+
+    methods: {
+        submit() {
+            this.$inertia.post('contact', this.form)
+        }
     }
 }
 </script>
