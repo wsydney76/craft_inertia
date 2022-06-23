@@ -1,0 +1,19 @@
+columnSuffix: etkjdofe
+contentColumnType: string(240)
+fieldGroup: fea375f0-9f46-4952-b272-2dcf42b0cce5 # Site Info
+handle: siteIntoTitle
+instructions: null
+name: 'Site Into Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 60
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

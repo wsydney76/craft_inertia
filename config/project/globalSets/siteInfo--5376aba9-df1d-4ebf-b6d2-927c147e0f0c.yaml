@@ -14,6 +14,54 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            fieldUid: 80f29b57-20ec-46ef-9ecf-fc91398f5dd8 # Site Nav
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d7d7ee5e-6404-4450-adcc-35adb0ec0985
+            warning: null
+            width: 100
+        name: 'Site Info'
+        uid: 29cb568f-4c66-4a24-9262-07552e72ab2e
+      -
+        elements:
+          -
+            fieldUid: f63bb4c9-dfab-42b9-8216-531caf9f8e3f # Site Into Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6aa5517f-2386-473d-a1f2-047245c5113e
+            warning: null
+            width: 100
+          -
+            fieldUid: 537ad494-7b3a-48ac-8eac-b9d6384f78ab # Site Intro Text
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fd41ff1e-a883-4f69-a4a0-7f66a7eb3c07
+            warning: null
+            width: 100
+          -
+            fieldUid: e66b59a5-0544-4803-a3e0-90a2f657eee9 # Site Intro Buttons
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 908c313f-991d-484d-a52d-649da86e05d9
+            warning: null
+            width: 100
+        name: Dashboard
+        uid: d352b79f-23a0-4ae9-9544-3e13821c383a
+      -
+        elements:
+          -
             fieldUid: 9a302fae-a3bf-4298-8a06-24f8c8f6f335 # Featured Image
             instructions: null
             label: null
@@ -53,8 +101,8 @@ fieldLayouts:
             uid: d582eb4d-6ee6-4eb5-a6f8-c110d6b69fa7
             warning: null
             width: 100
-        name: 'Site Info'
-        uid: 29cb568f-4c66-4a24-9262-07552e72ab2e
+        name: Deprecated
+        uid: 505ed46b-d1cf-4888-a676-b5e4c2517088
 handle: siteInfo
 name: 'Site Info'
 sortOrder: 2

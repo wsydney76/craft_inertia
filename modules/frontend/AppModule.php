@@ -23,7 +23,7 @@ class AppModule extends Module
             UrlManager::class,
             UrlManager::EVENT_REGISTER_SITE_URL_RULES, function(RegisterUrlRulesEvent $event) {
             $event->rules = array_merge($event->rules, [
-                '' => 'frontend/post/index',
+                '' => 'frontend/site/index',
                 'posts' => 'frontend/post/index',
                 'posts/<slug:[^\/]+>' => 'frontend/post/post',
                 'contact' => 'frontend/contact/form'

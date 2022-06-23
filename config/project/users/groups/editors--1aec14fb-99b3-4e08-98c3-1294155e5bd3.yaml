@@ -7,7 +7,7 @@ permissions:
   - accessplugin-work
   - accesssitewhensystemisoff
   - 'assignusergroup:1aec14fb-99b3-4e08-98c3-1294155e5bd3' # Editors
-  - 'createentries:09f97fdd-45fe-4221-982a-a2077c8460b1' # Page
+  - 'createentries:09f97fdd-45fe-4221-982a-a2077c8460b1'
   - 'createentries:0d69ffe4-360e-4d04-ac30-af0e4381b6ed' # Post
   - 'createentries:338d4897-8545-48cd-bd31-951a6ed52197' # Topic
   - 'createfolders:2f4c2da0-9bf2-47da-a2fb-b13bad08739c' # Documents
@@ -20,7 +20,7 @@ permissions:
   - 'deleteassets:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
   - 'deleteassets:99cbe848-2d62-42d0-ad15-948062a7561f' # User Photos
   - 'deleteassets:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
-  - 'deleteentries:09f97fdd-45fe-4221-982a-a2077c8460b1' # Page
+  - 'deleteentries:09f97fdd-45fe-4221-982a-a2077c8460b1'
   - 'deleteentries:0d69ffe4-360e-4d04-ac30-af0e4381b6ed' # Post
   - 'deleteentries:338d4897-8545-48cd-bd31-951a6ed52197' # Topic
   - 'deletepeerassets:2f4c2da0-9bf2-47da-a2fb-b13bad08739c' # Documents
@@ -59,7 +59,7 @@ permissions:
   - 'saveassets:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
   - 'saveassets:99cbe848-2d62-42d0-ad15-948062a7561f' # User Photos
   - 'saveassets:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
-  - 'saveentries:09f97fdd-45fe-4221-982a-a2077c8460b1' # Page
+  - 'saveentries:09f97fdd-45fe-4221-982a-a2077c8460b1'
   - 'saveentries:0d69ffe4-360e-4d04-ac30-af0e4381b6ed' # Post
   - 'saveentries:338d4897-8545-48cd-bd31-951a6ed52197' # Topic
   - 'savepeerassets:2f4c2da0-9bf2-47da-a2fb-b13bad08739c' # Documents
@@ -77,7 +77,7 @@ permissions:
   - 'viewassets:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
   - 'viewassets:99cbe848-2d62-42d0-ad15-948062a7561f' # User Photos
   - 'viewassets:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
-  - 'viewentries:09f97fdd-45fe-4221-982a-a2077c8460b1' # Page
+  - 'viewentries:09f97fdd-45fe-4221-982a-a2077c8460b1'
   - 'viewentries:0d69ffe4-360e-4d04-ac30-af0e4381b6ed' # Post
   - 'viewentries:338d4897-8545-48cd-bd31-951a6ed52197' # Topic
   - 'viewpeerassets:2f4c2da0-9bf2-47da-a2fb-b13bad08739c' # Documents
@@ -85,7 +85,7 @@ permissions:
   - 'viewpeerassets:8136d7e9-1a74-464d-aef2-3a4f91a5cdda' # Images
   - 'viewpeerassets:99cbe848-2d62-42d0-ad15-948062a7561f' # User Photos
   - 'viewpeerassets:cbbf12d2-97db-4750-8f2d-ea5a5ca1f975'
-  - 'viewpeerentries:09f97fdd-45fe-4221-982a-a2077c8460b1' # Page
+  - 'viewpeerentries:09f97fdd-45fe-4221-982a-a2077c8460b1'
   - 'viewpeerentries:0d69ffe4-360e-4d04-ac30-af0e4381b6ed' # Post
   - 'viewpeerentries:338d4897-8545-48cd-bd31-951a6ed52197' # Topic
   - 'viewpeerentrydrafts:0d69ffe4-360e-4d04-ac30-af0e4381b6ed' # Post

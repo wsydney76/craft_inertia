@@ -4,6 +4,8 @@ namespace modules\frontend\behaviors;
 
 use Craft;
 use craft\elements\Entry;
+use craft\helpers\HtmlPurifier;
+use modules\frontend\helpers\HtmlHelper;
 use yii\base\Behavior;
 use function nl2br;
 
@@ -32,7 +34,7 @@ class EntryBehavior extends Behavior
                 case "text": {
                     $blockData[] = [
                         'type' => 'text',
-                        'text' => nl2br($block->text)
+                        'text' => HtmlHelper::getSafeHtml($block->text)
                     ];
                     break;
                 }

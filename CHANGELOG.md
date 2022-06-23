@@ -1,6 +1,18 @@
 # Changelog
 
+## 1.3.0 2022-06-23
+
+### Added
+
+* Added dashboard demo powered by Craft global set
+
+### Changed
+
+* Site Nav is now powered by Craft global set
+
 ## 1.2.0 2022-06-23
+
+### Added
 
 * Added search to post listing
 
