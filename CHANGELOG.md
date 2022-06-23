@@ -1,9 +1,24 @@
 # Changelog
 
+## 1.1.0 2022-06-23
+
+### Added
+* Simple contact form example
+
+### Changed
+* nl2br for text blocks
+
+### Updated
+* Craft to 4.0.5.1
+
 ## 1.0.1 2022-06-22
 
+### Fixed
+
 * Fixed a bug where live preview was not working for fresh entries
-* Plugin update
+
+### Updated
+* Matrixmate to 2.0.2
 
 ## 1.0.0 2022-06-22
 
