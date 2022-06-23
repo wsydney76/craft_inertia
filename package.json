@@ -19,7 +19,6 @@
   "dependencies": {
     "@inertiajs/inertia": "^0.1.7",
     "@inertiajs/inertia-vue": "^0.1.2",
-    "@inertiajs/progress": "^0.2.6",
     "lodash": "^4.17.21",
     "popper.js": "^1.16.1",
     "portal-vue": "^2.1.7",
