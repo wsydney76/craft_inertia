@@ -23,11 +23,21 @@ class PostController extends Controller
 
     public function actionIndex()
     {
-        $entries = Entry::find()->section('post')->asArray()->all();
+
+        $query = Entry::find()->section('post');
+
+        $q = Craft::$app->request->getQueryParam('q');
+
+        if ($q) {
+            $query->search($q)->orderBy('score');
+        }
+
+        $entries = $query->asArray()->all();
 
         return $this->inertia('Posts/Index', [
             'title' => 'Posts',
-            'entries' => $entries
+            'entries' => $entries,
+            'q' => $q
         ]);
     }
 
