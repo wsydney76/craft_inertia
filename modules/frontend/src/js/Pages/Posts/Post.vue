@@ -19,9 +19,10 @@
                     <div v-if="block.type == 'heading'">
                         <h2 class="text-2xl font-bold">{{ block.text }}</h2>
                     </div>
-                    <p v-if="block.type == 'text'">
-                       {{ block.text }}
+
+                    <p v-if="block.type == 'text'" v-html="block.text">
                     </p>
+
                     <figure v-if="block.type == 'image' && block.imageUrl">
                         <img :src="block.imageUrl" :alt="block.alt">
                         <figcaption v-if="block.caption">
