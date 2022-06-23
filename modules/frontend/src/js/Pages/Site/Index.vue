@@ -1,9 +1,12 @@
 <template>
     <div>
-        <div class="mb-8" v-html="text">
-        </div>
+        <div class="mb-8" v-html="text"></div>
 
-        <inertia-link v-for="button in buttons" class="bg-brand-800 text-white px-4 py-2 mr-2" :key="button.url" :href="button.url">{{ button.label }}</inertia-link>
+        <inertia-link v-for="button in buttons"
+                      class="bg-brand-800 text-white px-4 py-2 mr-2"
+                      :key="button.url"
+                      :href="button.url">{{ button.label }}
+        </inertia-link>
 
     </div>
 </template>

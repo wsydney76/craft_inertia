@@ -52,8 +52,7 @@ class ContactController extends BaseController
             'message' => [
                 'name' => '',
                 'eMail' => '',
-                'text' => '',
-                'token' => $request->getCsrfToken()
+                'text' => ''
             ]
         ]);
     }
