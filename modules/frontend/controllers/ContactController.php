@@ -32,14 +32,14 @@ class ContactController extends Controller
 
         $isPost = $request->method == 'POST';
 
-        $fullName = $request->getBodyParam('fullName');
+        $name = $request->getBodyParam('name');
         $email = $request->getBodyParam('email');
         $text = $request->getBodyParam('text');
 
         if ($isPost) {
-            $model = DynamicModel::validateData(compact('fullName', 'email', 'text'), [
-                ['fullName', 'required'],
-                ['fullName', 'string', 'max' => 30],
+            $model = DynamicModel::validateData(compact('name', 'email', 'text'), [
+                ['name', 'required'],
+                ['name', 'string', 'max' => 30],
                 ['email', 'required'],
                 ['email', 'email'],
                 ['email', 'string', 'max' => 50],
@@ -60,7 +60,7 @@ class ContactController extends Controller
         return $this->inertia('Contact/Form', [
             'title' => 'Contact',
             'message' => [
-                'fullName' => '',
+                'name' => '',
                 'eMail' => '',
                 'text' => '',
                 'token' => $request->getCsrfToken()
