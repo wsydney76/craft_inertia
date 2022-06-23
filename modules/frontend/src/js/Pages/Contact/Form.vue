@@ -4,18 +4,24 @@
         <form @submit.prevent="submit">
             <div class="flex flex-col space-y-4">
 
-                <input type="text" class="bg-gray-50 border border-gray-500 p-2 w-1/2" v-model="form.name"
-                       placeholder="Name">
+                <div>
+                    <label for="name" class="block font-bold">Name</label>
+                    <input id="name" type="text" class="input w-1/2" v-model="form.name">
+                </div>
 
-                <input type="text" class="bg-gray-50 border border-gray-500 p-2 w-1/2" v-model="form.email"
-                       placeholder="EMail">
+                <div>
+                    <label for="email" class="block font-bold">EMail</label>
+                    <input id="email" type="text" class="input w-1/2" v-model="form.email">
+                </div>
 
-                <textarea rows="6" class="bg-gray-50 border border-gray-600 p-2 w-1/2" placeholder="Message"
-                          v-model="form.text"></textarea>
+                <div>
+                    <label for="text" class="block font-bold">Text</label>
+                    <textarea id="text" rows="6" class="input w-1/2" v-model="form.text"></textarea>
+                </div>
             </div>
 
             <div class="mt-8">
-                <button class="bg-brand-800 text-white px-4 py-2" type="submit">Send Message</button>
+                <button class="btn" type="submit">Send Message</button>
             </div>
 
         </form>

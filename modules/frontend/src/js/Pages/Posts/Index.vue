@@ -3,8 +3,8 @@
 
         <div class="mb-8">
             <form @submit.prevent="search">
-                <input type="text" v-model="form.q" class="border border-gray-500 p-2">
-                <button class="bg-brand-800 text-white px-4 py-2" href="posts">Search</button>
+                <input type="text" v-model="form.q" class="input">
+                <button class="btn" href="posts">Search</button>
                 <inertia-link v-if="q" class="" href="posts">Reset</inertia-link>
             </form>
         </div>

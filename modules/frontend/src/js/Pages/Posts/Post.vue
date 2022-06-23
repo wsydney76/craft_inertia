@@ -34,10 +34,10 @@
 
             <div class="flex space-x-8">
                 <div v-if="prevUrl" class="mt-8">
-                    <inertia-link class="bg-brand-800 text-white px-4 py-2" :href="prevUrl">Previous Post</inertia-link>
+                    <inertia-link class="btn" :href="prevUrl">Previous Post</inertia-link>
                 </div>
                 <div v-if="nextUrl" class="mt-8">
-                    <inertia-link class="bg-brand-800 text-white px-4 py-2" :href="nextUrl">Next Post</inertia-link>
+                    <inertia-link class="btn" :href="nextUrl">Next Post</inertia-link>
                 </div>
             </div>
 

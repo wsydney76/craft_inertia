@@ -26,6 +26,8 @@ class ContactController extends BaseController
 
     public function actionSend()
     {
+        $user = Craft::$app->user->identity;
+
         $request = Craft::$app->request;
 
         $name = $request->getBodyParam('name');
@@ -47,7 +49,12 @@ class ContactController extends BaseController
             return Craft::$app->response->redirect('contact');
         }
 
-        Craft::$app->session->setNotice('Message sent');
+        if ($user && $user->name != $name) {
+            Craft::$app->session->setError("You are not $name!");
+            return Craft::$app->response->redirect('contact');
+        }
+
+        Craft::$app->session->setNotice("Thanks $name, your message would have been sent, but sorry, this is only a demo...");
         return Craft::$app->response->redirect('');
     }
 }
