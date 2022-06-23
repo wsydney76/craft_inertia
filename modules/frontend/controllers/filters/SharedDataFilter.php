@@ -11,14 +11,12 @@ class SharedDataFilter extends ActionFilter
 {
   public function beforeAction($action): bool
   {
+      $siteInfo = GlobalSet::find()->handle('siteInfo')->one();
+
       Inertia::getInstance()->share([
-          'siteName' => GlobalSet::find()->handle('siteInfo')->one()->siteName ?? 'Inertia',
+          'siteName' => $siteInfo->siteName ?? 'Inertia',
           'siteUrl' => '',
-          'mainNav' => [
-              ['label' => 'Posts', 'url' => 'posts'],
-              ['label' => 'Topics', 'url' => 'topics'],
-              ['label' => 'Contact', 'url' => 'contact'],
-          ],
+          'mainNav' => $siteInfo->siteNav,
           'notice' => Craft::$app->session->getNotice(),
           'error' => Craft::$app->session->getError()
       ]);

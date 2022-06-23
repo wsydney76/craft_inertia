@@ -3,10 +3,10 @@ name: Gatsby
 scope:
   - 'sections.1d3e1ff8-2adc-4e4d-8796-e277ee738837:read'
   - 'entrytypes.935c2010-5ffe-45c3-9d2a-acef8f654b9c:read'
-  - 'sections.2c476892-24a5-43a5-ae3a-70f4609382e3:read' # Home
-  - 'entrytypes.eafd7029-f75a-42a9-9a04-a69b931b4250:read' # Home
-  - 'sections.09f97fdd-45fe-4221-982a-a2077c8460b1:read' # Page
-  - 'entrytypes.f93d0a69-cf0f-47c7-a17b-bb1070ce3df6:read' # Page
+  - 'sections.2c476892-24a5-43a5-ae3a-70f4609382e3:read'
+  - 'entrytypes.eafd7029-f75a-42a9-9a04-a69b931b4250:read'
+  - 'sections.09f97fdd-45fe-4221-982a-a2077c8460b1:read'
+  - 'entrytypes.f93d0a69-cf0f-47c7-a17b-bb1070ce3df6:read'
   - 'sections.0d69ffe4-360e-4d04-ac30-af0e4381b6ed:read' # Post
   - 'entrytypes.d90241f5-7ae6-4bad-a6ae-c8caa56979b3:read' # Post
   - 'sections.3792f859-a1b5-44b2-a5d5-4f3df611e91f:read'

@@ -1,0 +1,19 @@
+columnSuffix: fovihlgx
+contentColumnType: text
+fieldGroup: fea375f0-9f46-4952-b272-2dcf42b0cce5 # Site Info
+handle: siteIntroText
+instructions: null
+name: 'Site Intro Text'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
