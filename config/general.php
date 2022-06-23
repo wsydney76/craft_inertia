@@ -83,9 +83,6 @@ return [
         // The secure key Craft will use for hashing and encrypting data
         'securityKey' => Env::SECURITY_KEY,
 
-        // Use session instead of cookie for CSRF Protection (which is enabled by default)
-        'enableCsrfCookie' => false,
-
         // Whether front end requests should respond with X-Robots-Tag: none HTTP headers
         'disallowRobots' => true,
 

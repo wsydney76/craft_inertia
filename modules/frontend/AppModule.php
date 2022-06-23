@@ -6,6 +6,8 @@ use Craft;
 use craft\elements\Entry;
 use craft\events\DefineBehaviorsEvent;
 use craft\events\RegisterTemplateRootsEvent;
+use craft\events\RegisterUrlRulesEvent;
+use craft\web\UrlManager;
 use craft\web\View;
 use modules\frontend\behaviors\EntryBehavior;
 use yii\base\Event;
@@ -16,6 +18,19 @@ class AppModule extends Module
     public function init()
     {
         Craft::setAlias('@modules/frontend', $this->getBasePath());
+
+        Event::on(
+            UrlManager::class,
+            UrlManager::EVENT_REGISTER_SITE_URL_RULES, function(RegisterUrlRulesEvent $event) {
+            $event->rules = array_merge($event->rules, [
+                '' => 'frontend/post/index',
+                'posts' => 'frontend/post/index',
+                'posts/<slug:[^\/]+>' => 'frontend/post/post',
+                'contact' => 'frontend/contact/form'
+            ]);
+        }
+        );
+
 
         Event::on(
             View::class,
