@@ -12,11 +12,13 @@ class ContactController extends BaseController
 
     public function actionForm()
     {
+
+        $user = Craft::$app->user->identity;
         return $this->inertia('Contact/Form', [
             'title' => 'Contact',
             'message' => [
-                'name' => '',
-                'eMail' => '',
+                'name' => $user ? $user->name : '',
+                'email' => $user ? $user->email : '',
                 'text' => ''
             ]
         ]);
