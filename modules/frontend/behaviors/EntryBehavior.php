@@ -5,6 +5,7 @@ namespace modules\frontend\behaviors;
 use Craft;
 use craft\elements\Entry;
 use yii\base\Behavior;
+use function nl2br;
 
 class EntryBehavior extends Behavior
 {
@@ -31,7 +32,7 @@ class EntryBehavior extends Behavior
                 case "text": {
                     $blockData[] = [
                         'type' => 'text',
-                        'text' => $block->text
+                        'text' => nl2br($block->text)
                     ];
                     break;
                 }

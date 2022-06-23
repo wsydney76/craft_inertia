@@ -46,9 +46,14 @@ class PostController extends Controller
             throw new NotFoundHttpException();
         }
 
+        $prevEntry = $entry->getPrev(['section' => $entry->section->handle]);
+        $nextEntry = $entry->getNext(['section' => $entry->section->handle]);
+
         return $this->inertia('Posts/Post', [
             'title' => $entry['title'],
-            'entry' => $entry->getEntryData()
+            'entry' => $entry->getEntryData(),
+            'nextUrl' => $nextEntry ? $nextEntry->getUrl() : '',
+            'prevUrl' => $prevEntry ? $prevEntry->getUrl() : ''
         ]);
     }
 }
