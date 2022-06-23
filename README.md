@@ -14,11 +14,13 @@ DONE:
 * Updated to Tailwind 3.1
 * Live Preview is now working
 * Added some images/matrix blocks to entry view stub.
+* Added a simple contact form
 
 TODOS:
 
+* Security: Check/fix CSRF protection (see in adapter description) and check for possible conflicts with Crafts Control Panel.
+* Security: Check/fix HTML encoding in texts
 * Updating Vue / Inertia to current versions without changing code breaks the app. More Vue/Inertia knowledge is needed here.
-* Add some user interaction via POST requests (see 'CSRF protection' in adapter description) and check for possible conflicts with Crafts Control Panel.
 * Remove unused stuff.
 * Clean up build process (currently there are two separate jobs for creating JS and CSS. Also check for unused components)
 * Redesign layout, now it looks more than an application than a pretty web site.
