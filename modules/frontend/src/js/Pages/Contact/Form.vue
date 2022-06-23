@@ -3,10 +3,8 @@
     <div>
         <form @submit.prevent="submit">
             <div class="flex flex-col space-y-4">
-                <!-- TODO: implement and check proper CSRF protection -->
-                <input type="hidden" v-model="form._token">
 
-                <input type="text" class="bg-gray-50 border border-gray-500 p-2 w-1/2" v-model="form.fullName"
+                <input type="text" class="bg-gray-50 border border-gray-500 p-2 w-1/2" v-model="form.name"
                        placeholder="Name">
 
                 <input type="text" class="bg-gray-50 border border-gray-500 p-2 w-1/2" v-model="form.email"
@@ -40,10 +38,9 @@ export default {
     data() {
         return {
             form: {
-                fullName: this.message.fullName,
+                name: this.message.name,
                 email: this.message.email,
                 text: this.message.text,
-                _token: this.message.token // TODO: implement and check proper CSRF protections
             }
         }
     },
