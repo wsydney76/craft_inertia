@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.0 2022-06-23
+
+* Added search to post listing
+
 ## 1.1.0 2022-06-23
 
 ### Added
