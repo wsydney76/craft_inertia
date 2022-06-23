@@ -10,18 +10,8 @@ use function compact;
 use function implode;
 use function join;
 
-class ContactController extends Controller
+class ContactController extends BaseController
 {
-    public array|int|bool $allowAnonymous = true;
-
-    public function behaviors()
-    {
-        return [
-            [
-                'class' => SharedDataFilter::class
-            ]
-        ];
-    }
 
     public function actionForm()
     {

@@ -8,18 +8,8 @@ use modules\frontend\controllers\filters\SharedDataFilter;
 use modules\inertia\web\Controller;
 use yii\web\NotFoundHttpException;
 
-class PostController extends Controller
+class PostController extends BaseController
 {
-    public array|int|bool $allowAnonymous = true;
-
-    public function behaviors()
-    {
-        return [
-            [
-                'class' => SharedDataFilter::class
-            ]
-        ];
-    }
 
     public function actionIndex()
     {
