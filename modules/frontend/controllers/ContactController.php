@@ -19,8 +19,9 @@ class ContactController extends BaseController
             'message' => [
                 'name' => $user ? $user->name : '',
                 'email' => $user ? $user->email : '',
-                'text' => ''
-            ]
+                'text' => '',
+            ],
+            'errors' => Craft::$app->session->getFlash('errors') ?? []
         ]);
     }
 
@@ -45,7 +46,8 @@ class ContactController extends BaseController
         ]);
 
         if ($model->hasErrors()) {
-            Craft::$app->session->setError(implode(' // ', $model->firstErrors));
+            Craft::$app->session->setError("Could not send message");
+            Craft::$app->session->setFlash('errors', $model->errors);
             return Craft::$app->response->redirect('contact');
         }
 

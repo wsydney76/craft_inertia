@@ -18,7 +18,7 @@
                 <div class="flex flex-grow overflow-hidden">
                     <main-menu :url="url()"
                                class="bg-brand-800 flex-shrink-0 w-56 p-12 hidden md:block overflow-y-auto"/>
-                    <div class="flex-1 overflow-hidden px-4 py-8 md:px-12 py-0 overflow-y-auto" scroll-region>
+                    <div class="flex-1 overflow-hidden px-4 py-8 md:px-12 py-0 overflow-y-auto" scroll-region="true">
 
                         <div v-if="$page.error" class="my-2 bg-red-500 text-white px-4 py-2">
                             {{ $page.error }}

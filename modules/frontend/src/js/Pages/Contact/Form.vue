@@ -7,16 +7,25 @@
                 <div>
                     <label for="name" class="block font-bold">Name</label>
                     <input id="name" type="text" class="input w-1/2" v-model="form.name">
+                    <div v-if="errors.name" class="text-red-700">
+                        {{ errors.name[0] }}
+                    </div>
                 </div>
 
                 <div>
                     <label for="email" class="block font-bold">EMail</label>
                     <input id="email" type="text" class="input w-1/2" v-model="form.email">
+                    <div v-if="errors.email" class="text-red-700">
+                        {{ errors.email[0] }}
+                    </div>
                 </div>
 
                 <div>
                     <label for="text" class="block font-bold">Text</label>
                     <textarea id="text" rows="6" class="input w-1/2" v-model="form.text"></textarea>
+                    <div v-if="errors.text" class="text-red-700">
+                        {{ errors.text[0] }}
+                    </div>
                 </div>
             </div>
 
@@ -38,7 +47,8 @@ export default {
     },
     layout: Layout,
     props: {
-        message: Object
+        message: Object,
+        errors: Array
     },
 
     data() {
