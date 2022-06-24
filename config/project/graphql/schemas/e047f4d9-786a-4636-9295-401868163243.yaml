@@ -23,7 +23,7 @@ scope:
   - 'volumes.cbbf12d2-97db-4750-8f2d-ea5a5ca1f975:read'
   - 'volumes.2f4c2da0-9bf2-47da-a2fb-b13bad08739c:read' # Documents
   - 'globalsets.5376aba9-df1d-4ebf-b6d2-927c147e0f0c:read' # Site Info
-  - 'globalsets.f8d2f509-8906-46f9-959b-a2297e7f1abf:read' # Site Navigation
+  - 'globalsets.f8d2f509-8906-46f9-959b-a2297e7f1abf:read'
   - 'gatsby:read'
   - 'elements.drafts:read'
   - 'elements.revisions:read'

@@ -18,7 +18,8 @@ class SharedDataFilter extends ActionFilter
           'siteUrl' => '/',
           'mainNav' => Craft::$app->config->custom->siteNav,
           'notice' => Craft::$app->session->getNotice(),
-          'error' => Craft::$app->session->getError()
+          'error' => Craft::$app->session->getError(),
+          'copyright' => $siteInfo->copyright,
       ]);
 
       return true;

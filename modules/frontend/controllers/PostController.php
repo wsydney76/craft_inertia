@@ -37,6 +37,7 @@ class PostController extends BaseController
             'prevUrl' => $page > 1 ? UrlHelper::url('/posts', ['page' => $page - 1]) : '',
             'pageInfo' => $paginator->totalPages > 1 ? "Page {$page} of {$paginator->totalPages}" : '',
             'entries' => array_map(fn($entry) => [
+                'id' => $entry->id,
                 'title' => $entry->title,
                 'url' => $entry->url
             ], $paginator->getPageResults()),

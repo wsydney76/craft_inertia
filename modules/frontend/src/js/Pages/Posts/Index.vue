@@ -21,7 +21,7 @@
                 <tr v-for="entry in entries" :key="entry.id" class="hover:bg-gray-100 focus-within:bg-gray-100">
                     <td class="border-t">
                         <inertia-link class="px-6 py-4 flex items-center focus:text-brand-500"
-                                      :href="'posts/' + entry.slug">
+                                      :href="entry.url">
                             {{ entry.title }}
                         </inertia-link>
                     </td>
@@ -40,9 +40,12 @@
 import Layout from '@/Shared/Layout'
 
 export default {
-    metaInfo: {title: 'Posts'},
+    metaInfo() {
+        return {title: this.title}
+    },
     layout: Layout,
     props: {
+        title: String,
         entries: Array,
         q: String,
         pageInfo: String

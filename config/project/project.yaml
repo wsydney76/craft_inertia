@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e # Temporary Uploads
-dateModified: 1656093548
+dateModified: 1656103534
 elementSources:
   craft\elements\Asset:
     -
@@ -193,10 +193,8 @@ meta:
     7a11b052-f8c9-46d7-8bb4-7c9a3916200c: Image # Image
     7d7cf5ed-7c41-4d49-ba86-cef811f69683: Color # Color
     8af41142-86a7-4e1c-870c-aab28c4a827b: 'Entries 1' # Entries 1
-    08fc32b6-7f51-4b0f-8921-5f6cbdad10e3: 'Drop Down' # Drop Down
     9a302fae-a3bf-4298-8a06-24f8c8f6f335: 'Featured Image' # Featured Image
     9b2aaaa8-c827-4881-955a-86f2df0ea79c: 'Related Entries' # Related Entries
-    15c0556c-f778-4258-ae84-ff8cef62b761: 'Footer Navigation' # Footer Navigation
     25c13312-e79c-4f00-b607-88fab9e35920: __blank__ # __blank__
     25fbe2f8-c1c3-4e3e-8a39-0b06a6392428: Images # Images
     35c3b3f5-30e7-4780-9ae1-286ee8bd275e: 'Temporary Uploads' # Temporary Uploads
@@ -231,13 +229,11 @@ meta:
     22733645-b85a-49e7-8c69-a5e02ec8993c: Images # Images
     a6c330ac-aa61-44e4-a5fe-61b35e4eeb36: Display # Display
     a6d13a9f-d4ed-41e5-be7f-c93dcb679633: Text # Text
-    ae7d91c8-8743-46bb-a954-438a27946b97: 'Primary Navigation' # Primary Navigation
     b026d20d-f781-469f-8c4c-5f5c65c66027: Target # Target
     b6d41688-97a9-4dc8-b5b0-34ced913037a: 'Radio 1' # Radio 1
     b40dbfe9-2815-4f06-8ec3-c20f2a587460: DateTime1 # DateTime1
     bad8f5ab-fcf4-4fec-9ade-7652b14f376e: Level # Level
     bc485c8b-4a0c-4c30-816a-8bb295727b36: Text # Text
-    c4d63380-a55e-438d-9ec4-18f62fe8332b: 'Top Level Links' # Top Level Links
     c7d0c14f-5533-4bdc-863d-cedbbb544960: Text # Text
     c9b0dd19-d915-4588-9485-2c42e30bf384: Color # Color
     c6943610-b0b4-4588-88b9-c13480f83557: Caption # Caption
@@ -257,7 +253,6 @@ meta:
     efc1fd0a-3fd1-4379-84a0-e8cf931be331: Display # Display
     f049bdd0-6f43-47c4-a14d-4e40b7bc84cb: Text # Text
     f1d8d989-2bc0-4a0f-b58f-a348276a5596: Content # Content
-    f8d2f509-8906-46f9-959b-a2297e7f1abf: 'Site Navigation' # Site Navigation
     f27f4038-975b-41d2-a58a-7e78ed2000f5: Features # Features
     f63bb4c9-dfab-42b9-8216-531caf9f8e3f: 'Site Into Title' # Site Into Title
     f90b9645-97c8-4969-b1ee-149e79a745e7: Topic # Topic
@@ -271,7 +266,8 @@ plugins:
     enabled: true
     schemaVersion: 2.0.0
     settings:
-      additionalCss: "html,body {\r\n  font-size: 15px;\r\n}\r\ninput.text, textarea.text, .text > input, .text > textarea, table.editable textarea, .selectize-text > .selectize-control > .selectize-input {\r\n  font-size: 16px;\r\n}\r\n#global-sidebar {\r\n background-color: #13254B;\r\n}\r\n\r\n\r\n#main-form h2 {\r\n\tfont-size:17px;\r\n}\r\n\r\n.sidebar .heading span {\r\n  color: #264a6c;\r\n  font-size: 14px;\r\n  letter-spacing: 1px\r\n}\r\n\r\n.blocktype {\r\n\tfont-weight: bold;\r\n}\r\n"
+      additionalCss: "html,body {\r\n  font-size: 15px;\r\n}\r\ninput.text, textarea.text, .text > input, .text > textarea, table.editable textarea, .selectize-text > .selectize-control > .selectize-input {\r\n  font-size: 16px;\r\n}\r\n#global-sidebar {\r\n background-color: #075985;\r\n}\r\n\r\n\r\n#main-form h2 {\r\n\tfont-size:17px;\r\n}\r\n\r\n.sidebar .heading span {\r\n  color: #264a6c;\r\n  font-size: 14px;\r\n  letter-spacing: 1px\r\n}\r\n\r\n.blocktype {\r\n\tfont-weight: bold;\r\n}\r\n"
+      cacheBusting: true
       cssFile: ''
   elementmap:
     edition: standard
