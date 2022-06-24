@@ -9,6 +9,7 @@ use craft\elements\Entry;
 use craft\elements\User;
 use Faker\Factory;
 use Faker\Generator;
+use yii\console\ExitCode;
 use yii\helpers\Console;
 use function implode;
 use const PHP_EOL;
@@ -19,16 +20,16 @@ class SeedController extends Controller
     public const SECTIONHANDLE = 'post';
     public $topicSlug = 'examples';
 
-    public function actionCreateEntries(int $num = self::NUM_ENTRIES, $sectionHandle = self::SECTIONHANDLE)
+    public function actionCreateEntries(int $num = self::NUM_ENTRIES, $sectionHandle = self::SECTIONHANDLE): int
     {
         $section = Craft::$app->sections->getSectionByHandle($sectionHandle);
         if (!$section) {
             $this->stderr("Invalid section {$sectionHandle}") . PHP_EOL;
-            return;
+            return ExitCode::UNSPECIFIED_ERROR;
         }
 
         if (!$this->confirm("Create {$num} entries of type '{$section->name}'?")) {
-            return;
+            return ExitCode::UNSPECIFIED_ERROR;
         }
 
         $faker = Factory::create();
@@ -68,6 +69,8 @@ class SeedController extends Controller
                 $this->stderr('failed: ' . implode(', ', $entry->getErrorSummary(true)) . PHP_EOL, Console::FG_RED);
             }
         }
+
+        return ExitCode::OK;
     }
 
     protected function getBodyContent(Generator $faker)
@@ -106,8 +109,7 @@ class SeedController extends Controller
                     $block = [
                         'type' => 'heading',
                         'fields' => [
-                            'text' => $faker->text(40),
-                            'tag' => 'h2'
+                            'text' => $faker->text(40)
                         ]
                     ];
                     break;
