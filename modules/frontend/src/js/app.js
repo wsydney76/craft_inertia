@@ -1,15 +1,11 @@
 import Vue from 'vue'
 import VueMeta from 'vue-meta'
-import PortalVue from 'portal-vue'
 import { InertiaApp } from '@inertiajs/inertia-vue'
 
 Vue.config.productionTip = false
 
 Vue.use(InertiaApp)
-Vue.use(PortalVue)
 Vue.use(VueMeta)
-
-// InertiaProgress.init()
 
 let app = document.getElementById('app')
 
