@@ -2,7 +2,7 @@ columnSuffix: adhmyeng
 contentColumnType: text
 fieldGroup: fea375f0-9f46-4952-b272-2dcf42b0cce5 # Site Info
 handle: siteNav
-instructions: null
+instructions: 'Url must start with a slash. eg /contact'
 name: 'Site Nav'
 searchable: false
 settings:
