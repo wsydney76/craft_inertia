@@ -2,7 +2,11 @@
 
 ## Unreleased
 
-### Changed
+### Added
+
+* Added progress indicator
+
+### Internal
 
 * Updated npm components to latest versions
 
