@@ -1,13 +1,12 @@
 {
   "name": "Craft-Inertia",
-  "version": "1.0.0",
+  "version": "1.5.0",
   "description": "Proof of concept Vue/Inertia app powered by Craft CMS",
   "main": "index.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --config webpack.config.js",
     "watch": "webpack  --config webpack.config.js --watch",
     "prod": "webpack --config webpack.config.js --optimize-minimize --mode production"

@@ -31,7 +31,7 @@ class PostController extends BaseController
         ]);
 
 
-        $entries = $paginator->getPageResults()   ;
+        $entries = $paginator->getPageResults();
 
         return $this->inertia('Posts/Index', [
             'title' => 'Posts',

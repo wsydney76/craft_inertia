@@ -1,6 +1,6 @@
 {
     "name": "wsydney76/craft_inertia",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "description": "Inertia proof of concept",
     "license": "Unlicense",
     "require": {

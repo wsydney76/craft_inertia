@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.5.0 2022-06-24
+
+### Added
+
+* Pagination for post index
+
+### Changed
+
+* Layout improvements
+
+### Fixed
+
+* Fixed a bug where the main menu was hidden on mobile
+
 ## 1.4.0 2022-06-24
 
 ### Added
