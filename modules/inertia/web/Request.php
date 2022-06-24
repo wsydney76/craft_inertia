@@ -32,11 +32,7 @@ class Request extends \craft\web\Request
             return null;
         }
 
-        if (defined('PHP_VERSION_ID') && PHP_VERSION_ID >= 70000) {
-            $data = @unserialize($data, ['allowed_classes' => false]);
-        } else {
-            $data = @unserialize($data);
-        }
+        $data = @unserialize($data, ['allowed_classes' => false]);
 
         if (is_array($data) && isset($data[0], $data[1]) && $data[0] === $this->csrfParam) {
             return Craft::$app->security->maskToken($data[1]);

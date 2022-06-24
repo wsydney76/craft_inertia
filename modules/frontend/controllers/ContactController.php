@@ -14,35 +14,31 @@ class ContactController extends BaseController
     {
 
         $user = Craft::$app->user->identity;
+
         return $this->inertia('Contact/Form', [
             'title' => 'Contact',
             'message' => [
-                'name' => $user ? $user->name : '',
-                'email' => $user ? $user->email : '',
+                'name' => $user->name ?? '',
+                'email' => $user->email ?? '',
                 'text' => '',
             ],
-            'errors' => Craft::$app->session->getFlash('errors') ?? []
+            'errors' => Craft::$app->session->getFlash('errors', [], true)
         ]);
     }
 
     public function actionSend()
     {
-        $user = Craft::$app->user->identity;
-
         $request = Craft::$app->request;
 
-        $name = $request->getBodyParam('name');
-        $email = $request->getBodyParam('email');
-        $text = $request->getBodyParam('text');
-
-        $model = DynamicModel::validateData(compact('name', 'email', 'text'), [
-            ['name', 'required'],
+        $model = DynamicModel::validateData([
+            'name' => $request->getBodyParam('name'),
+            'email' => $request->getBodyParam('email'),
+            'text' => $request->getBodyParam('text')
+        ], [
+            [['name', 'email', 'text'], 'required'],
             ['name', 'string', 'max' => 30],
-            ['email', 'required'],
             ['email', 'email'],
-            ['email', 'string', 'max' => 50],
-            ['text', 'required'],
-            ['text', 'string', 'min' => 20],
+            ['text', 'string', 'min' => 30],
         ]);
 
         if ($model->hasErrors()) {
@@ -51,12 +47,8 @@ class ContactController extends BaseController
             return Craft::$app->response->redirect('contact');
         }
 
-        if ($user && $user->name != $name) {
-            Craft::$app->session->setError("You are not $name!");
-            return Craft::$app->response->redirect('contact');
-        }
 
-        Craft::$app->session->setNotice("Thanks $name, your message would have been sent, but sorry, this is only a demo...");
+        Craft::$app->session->setNotice("Thank you, your message would have been sent, but sorry, this is only a demo...");
         return Craft::$app->response->redirect('');
     }
 }

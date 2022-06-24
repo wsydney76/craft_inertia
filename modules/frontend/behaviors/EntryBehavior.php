@@ -34,7 +34,7 @@ class EntryBehavior extends Behavior
                 case "text": {
                     $blockData[] = [
                         'type' => 'text',
-                        'text' => HtmlHelper::getSafeHtml($block->text)
+                        'text' => HtmlHelper::getSafeMarkdownHtml($block->text)
                     ];
                     break;
                 }
