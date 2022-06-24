@@ -10,7 +10,7 @@
                             {{ $page.props.siteName }}
                         </inertia-link>
                     </div>
-                    <div class="px-12 py-4 flex justify-between items-center w-full border-b border-gray-500 bg-brand-100">
+                        <div class="px-12 py-4 flex justify-between items-center w-full border-b border-gray-500 bg-gray-100">
                         <h1 class="font-bold text-3xl"> {{ $page.props.title }}</h1>
                         <div class="flex space-x-2">
                             <div v-if="$page.props.prevUrl">
