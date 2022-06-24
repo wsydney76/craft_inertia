@@ -20,7 +20,7 @@ Hint: Not all configured sections/fields/block types are covered by the app.
 
 * Security: Check/fix CSRF protection (see in adapter description) and check for possible conflicts with Crafts Control Panel.
 * Remove unused stuff.
-* Clean up build process (currently there are two separate jobs for creating JS and CSS. Also check for unused components)
+* Clean up build process (Also check for unused components)
 * Redesign layout, now it looks more than an application than a pretty web site.
 
 ## Out of scope
