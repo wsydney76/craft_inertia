@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e # Temporary Uploads
-dateModified: 1656068112
+dateModified: 1656093548
 elementSources:
   craft\elements\Asset:
     -
@@ -206,7 +206,6 @@ meta:
     70c1c09f-e41e-4275-9ce4-fe493b9fe72f: __blank__ # __blank__
     71fd1263-a3ef-4a3a-bdfe-991ded81c27d: 'Alt Text' # Alt Text
     72fdc33e-481f-40c0-80ad-c531e3a557c7: 'Site Logo' # Site Logo
-    80f29b57-20ec-46ef-9ecf-fc91398f5dd8: 'Site Nav' # Site Nav
     81dfb777-1307-40c9-ad9a-7d84f1c835ed: DateTime2 # DateTime2
     90b94f80-c868-4c22-8bda-3abd94d99530: 'Gallery Thumbnail' # Gallery Thumbnail
     91e82c8e-91b5-456d-a06b-bd9e86bb5059: Entries # Entries

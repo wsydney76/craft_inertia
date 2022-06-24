@@ -38,6 +38,6 @@ Also, the app does not support multiple sites.
 * Run `composer install`
 * Update `config/Env.php` with your settings.
 * Run `php craft install`
-* Update Globals Site Info (Use `/posts` and `/contact`) as urls for Site Nav / Site Intro Buttons
+* Update Globals Site Info (Use `/posts` and `/contact`) as urls for Site Intro Buttons
 * Upload some images
 * Run `php craft main/seed/create-entries 30` in order to create some fake posts.

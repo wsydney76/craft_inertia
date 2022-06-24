@@ -16,7 +16,7 @@ class SharedDataFilter extends ActionFilter
       Inertia::getInstance()->share([
           'siteName' => $siteInfo->siteName ?? 'Inertia',
           'siteUrl' => '/',
-          'mainNav' => $siteInfo->siteNav,
+          'mainNav' => Craft::$app->config->custom->siteNav,
           'notice' => Craft::$app->session->getNotice(),
           'error' => Craft::$app->session->getError()
       ]);
