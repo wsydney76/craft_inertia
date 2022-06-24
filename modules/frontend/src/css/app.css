@@ -10,3 +10,5 @@
         @apply bg-gray-50 border border-gray-500 p-2;
     }
 }
+
+@import '~baguettebox.js/dist/baguetteBox.min.css';

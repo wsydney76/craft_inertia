@@ -40,53 +40,6 @@ class MainModule extends Module
         }
         );
 
-        // Validation Rules
-
-        Event::on(
-            Entry::class,
-            Entry::EVENT_DEFINE_RULES, function(DefineRulesEvent $event) {
-            /** @var Entry $entry */
-            $entry = $event->sender;
-            if ($entry->resaving || $entry->propagating || $entry->scenario != Entry::STATUS_LIVE) {
-                return;
-            }
-            $event->rules[] = [['bodyContent'], BodyContentValidator::class];
-        });
-
-        // Validate entries on all sites (fixes open Craft bug)
-        Event::on(
-            Entry::class,
-            Entry::EVENT_BEFORE_SAVE, function($event) {
-
-            /** @var Entry $entry */
-            $entry = $event->sender;
-
-            // TODO: Check conditionals
-
-            if ($entry->resaving || $entry->propagating || $entry->scenario != Entry::STATUS_LIVE) {
-                return;
-            }
-
-            $entry->validate();
-
-            if ($entry->hasErrors()) {
-                return;
-            }
-
-            foreach ($entry->getLocalized()->all() as $localizedEntry) {
-                $localizedEntry->scenario = Entry::SCENARIO_LIVE;
-
-                if (!$localizedEntry->validate()) {
-                    $entry->addError(
-                        $entry->type->hasTitleField ? 'title' : 'slug',
-                        Craft::t('site', 'Error validating entry in') .
-                        ' "' . $localizedEntry->site->name . '". ' .
-                        implode(' ', $localizedEntry->getErrorSummary(false)));
-                    $event->isValid = false;
-                }
-            }
-        });
-
         // Register Collection::one() as an alias of first(), for consistency with yii\db\Query.
         // TODO: Remove when upgrading to 4.1
         Collection::macro('one', function() {

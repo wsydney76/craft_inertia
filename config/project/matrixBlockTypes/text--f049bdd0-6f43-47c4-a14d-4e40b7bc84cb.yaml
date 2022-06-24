@@ -14,98 +14,9 @@ fieldLayouts:
             uid: 5966dedf-4e96-4924-9494-3deb477adbda
             warning: null
             width: 100
-          -
-            fieldUid: 4230d05c-5e66-4718-8fa2-0371dc10d9cb # Display
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 9eedb100-a3de-4dcd-b46f-7fdaa3fbde9c
-            warning: null
-            width: 25
         name: Content
         uid: 4d5f2ecd-4143-4ad6-89ac-e73b3fed6a70
 fields:
-  4230d05c-5e66-4718-8fa2-0371dc10d9cb: # Display
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: display
-    instructions: null
-    name: Display
-    searchable: false
-    settings:
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - Default
-            -
-              - value
-              - default
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - Highlight
-            -
-              - value
-              - highlight
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - Warning
-            -
-              - value
-              - warning
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - Information
-            -
-              - value
-              - information
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - 'Align left'
-            -
-              - value
-              - left
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - 'Align right'
-            -
-              - value
-              - right
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
   a6d13a9f-d4ed-41e5-be7f-c93dcb679633: # Text
     columnSuffix: null
     contentColumnType: text

@@ -8,7 +8,6 @@
         "doublesecretagency/craft-cpcss": "2.5.0",
         "fakerphp/faker": "^1.15",
         "tebe/yii2-inertia": "^1.0",
-        "vaersaagod/matrixmate": "2.0.2",
         "wsydney76/elementmap": "^4.0.6"
     },
     "require-dev": {

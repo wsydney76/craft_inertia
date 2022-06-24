@@ -16,6 +16,11 @@ InertiaProgress.init({
     color: '#1E3A8A',
 })
 
+window.baguetteBox = require('baguettebox.js');
+
+window.initLightBox = function(id) {
+    window.baguetteBox.run(id);
+}
 
 new Vue({
   metaInfo: {

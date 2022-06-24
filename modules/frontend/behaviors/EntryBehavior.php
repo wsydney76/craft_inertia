@@ -60,6 +60,50 @@ class EntryBehavior extends Behavior
                     }
                     break;
                 }
+
+                case "quote": {
+                    $blockData[] = [
+                        'type' => 'quote',
+                        'text' => HtmlHelper::getSafeHtml($block->text),
+                        'attribution' => $block->attribution
+                    ];
+                    break;
+                }
+
+                case "button": {
+                    $target = $block->target->one();
+                    if ($target) {
+                        $blockData[] = [
+                            'type' => 'button',
+                            'url' => $target->getUrl(),
+                            'caption' => $block->caption ?: $target->title
+                        ];
+                    }
+                    break;
+                }
+
+                case "gallery": {
+                    $images = $block->images->withTransforms(['galleryThumbnail','galleryFullHeight'])->all();
+
+                    if ($images) {
+                        $imageData = [];
+                        foreach ($images as $image) {
+                            $imageData[] = [
+                                'thumbnailUrl' => $image->getUrl('galleryThumbnail'),
+                                'fullHeightUrl' => $image->getUrl('galleryFullHeight'),
+                                'caption' => $image->altText ?: $image->title
+                            ];
+                        }
+
+                        $blockData[] = [
+                            'type' => 'gallery',
+                            'id' => $block->id,
+                            'images' => $imageData
+                        ];
+                    }
+
+                    break;
+                }
             }
         }
 

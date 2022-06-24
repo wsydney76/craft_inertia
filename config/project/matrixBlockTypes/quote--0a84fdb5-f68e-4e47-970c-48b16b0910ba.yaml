@@ -15,16 +15,6 @@ fieldLayouts:
             warning: null
             width: 75
           -
-            fieldUid: efc1fd0a-3fd1-4379-84a0-e8cf931be331 # Display
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 1d3e85f2-0f9e-4f36-a3c1-060074811bc9
-            warning: null
-            width: 25
-          -
             fieldUid: d420edab-c758-4dce-8b02-e17b23ed0e60 # Attribution
             instructions: null
             label: null
@@ -77,52 +67,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  efc1fd0a-3fd1-4379-84a0-e8cf931be331: # Display
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: display
-    instructions: null
-    name: Display
-    searchable: false
-    settings:
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - Default
-            -
-              - value
-              - default
-            -
-              - default
-              - '1'
-        -
-          __assoc__:
-            -
-              - label
-              - 'Align left'
-            -
-              - value
-              - left
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - 'Align right'
-            -
-              - value
-              - right
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
 handle: quote
 name: Quote
 sortOrder: 5

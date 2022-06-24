@@ -19,6 +19,7 @@
     "@inertiajs/inertia-vue": "^0.6.2",
     "@inertiajs/progress": "^0.2.7",
     "@tailwindcss/typography": "^0.5.2",
+    "baguettebox.js": "^1.11.1",
     "lodash": "^4.17.21",
     "postcss-loader": "^4.3.0",
     "tailwindcss": "^3.1.4",
