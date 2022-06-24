@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Changed
+
+* Updated npm components to latest versions
+
 ## 1.3.0 2022-06-23
 
 ### Added

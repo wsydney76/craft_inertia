@@ -4,8 +4,6 @@ namespace modules\frontend\controllers;
 
 use Craft;
 use yii\base\DynamicModel;
-use function compact;
-use function implode;
 
 class ContactController extends BaseController
 {

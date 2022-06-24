@@ -28,6 +28,7 @@ class AppModule extends Module
                 'posts/<slug:[^\/]+>' => 'frontend/post/post',
                 'POST contact' => 'frontend/contact/send',
                 'contact' => 'frontend/contact/form',
+                'empty' => 'frontend/site/empty'
             ]);
         }
         );

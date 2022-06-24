@@ -6,12 +6,12 @@
 
                 <div class="md:flex">
                     <div class="bg-brand-900 md:flex-shrink-0 md:w-56 px-6 py-4 flex items-center">
-                        <inertia-link class="mt-1 text-white text-xl" :href="$page.siteUrl">
-                            {{ $page.siteName }}
+                        <inertia-link class="mt-1 text-white text-xl" :href="$page.props.siteUrl">
+                            {{ $page.props.siteName }}
                         </inertia-link>
                     </div>
                     <div class="px-12 py-4">
-                        <h1 class="font-bold text-3xl"> {{ $page.title }}</h1>
+                        <h1 class="font-bold text-3xl"> {{ $page.props.title }}</h1>
                     </div>
                 </div>
 

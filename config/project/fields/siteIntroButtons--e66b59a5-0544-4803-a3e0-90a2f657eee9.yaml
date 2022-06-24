@@ -2,7 +2,7 @@ columnSuffix: obgfjmsa
 contentColumnType: text
 fieldGroup: fea375f0-9f46-4952-b272-2dcf42b0cce5 # Site Info
 handle: siteIntroButtons
-instructions: 'Buttons for Homepage'
+instructions: 'Buttons for Homepage. Url must start with a slash. eg /contact'
 name: 'Site Intro Buttons'
 searchable: false
 settings:
