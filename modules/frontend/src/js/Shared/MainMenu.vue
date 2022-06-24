@@ -20,7 +20,9 @@ export default {
                 return this.url === ''
             }
 
-            return urls.filter(url => this.url.startsWith(url)).length
+            let currentUrl = '/' + this.url
+
+            return urls.filter(url => currentUrl.startsWith(url)).length
         },
     },
 }

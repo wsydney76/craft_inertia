@@ -4,14 +4,14 @@
         <div class="mb-8">
             <form @submit.prevent="search">
                 <input type="text" v-model="form.q" class="input">
-                <button class="btn" href="posts">Search</button>
+                <button class="btn" type="submit">Search</button>
                 <inertia-link v-if="q" class="" href="posts">Reset</inertia-link>
             </form>
         </div>
 
         <div class="bg-white rounded shadow overflow-x-auto">
             <table class="w-full whitespace-no-wrap">
-                <tr class="text-left font-bold">
+                <tr class="text-left font-bold border-t">
                     <th class="px-6 pt-6 pb-4">Title</th>
                 </tr>
                 <tr v-for="entry in entries" :key="entry.id" class="hover:bg-gray-100 focus-within:bg-gray-100">
@@ -53,7 +53,7 @@ export default {
 
     methods: {
         search() {
-            this.$inertia.post('posts?q=' + this.form.q)
+            this.$inertia.get('posts', {q: this.form.q})
         }
     }
 }

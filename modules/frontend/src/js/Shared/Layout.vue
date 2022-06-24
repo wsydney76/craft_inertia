@@ -20,11 +20,11 @@
                                class="bg-brand-800 flex-shrink-0 w-56 p-12 hidden md:block overflow-y-auto"/>
                     <div class="flex-1 overflow-hidden px-4 py-8 md:px-12 py-0 overflow-y-auto" scroll-region="true">
 
-                        <div v-if="$page.error" class="my-2 bg-red-500 text-white px-4 py-2">
-                            {{ $page.error }}
+                        <div v-if="$page.props.error" class="my-2 bg-red-500 text-white px-4 py-2">
+                            {{ $page.props.error }}
                         </div>
-                        <div v-if="$page.notice" class="my-2 bg-green-700 text-white px-4 py-2">
-                            {{ $page.notice }}
+                        <div v-if="$page.props.notice" class="my-2 bg-green-700 text-white px-4 py-2">
+                            {{ $page.props.notice }}
                         </div>
 
                         <div class="my-8">

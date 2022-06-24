@@ -3,6 +3,8 @@ import VueMeta from 'vue-meta'
 import { InertiaApp } from '@inertiajs/inertia-vue'
 import { InertiaProgress } from '@inertiajs/progress'
 
+import '../css/app.css'
+
 Vue.config.productionTip = false
 
 Vue.use(InertiaApp)
