@@ -21,12 +21,23 @@ Hint: Not all configured sections/fields/block types are covered by the app.
 * Security: Check/fix CSRF protection (see in adapter description) and check for possible conflicts with Crafts Control Panel.
 * Remove unused stuff.
 * Clean up build process (Also check for unused components)
-* Redesign layout, now it looks more than an application than a pretty web site.
+* Redesign layout, now it looks more than an application than a pretty website.
 
 ## Out of scope
 
-It is not a goal of this PoC to demonstrate how to build well designed, well structured Vue components.
+It is not a goal of this PoC to demonstrate how to build well-designed, well-structured Vue components.
 
 It is just to show how routing works and how data is sent back and forth between client and server.
 
-Also not supporting multiple sites.
+Also, the app does not support multiple sites.
+
+## Getting started (Short version)
+
+* Prepare database / web server
+* Clone this repository
+* Run `composer install`
+* Update `config/Env.php` with your settings.
+* Run `php craft install`
+* Update Globals Site Info (Use `/posts` and `/contact`) as urls for Site Nav / Site Intro Buttons
+* Upload some images
+* Run `php craft main/seed/create-entries 30` in order to create some fake posts.
