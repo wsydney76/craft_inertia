@@ -3,15 +3,14 @@ import VueMeta from 'vue-meta'
 import { InertiaApp } from '@inertiajs/inertia-vue'
 import { InertiaProgress } from '@inertiajs/progress'
 
+import '../css/app.css'
+
 Vue.config.productionTip = false
 
 Vue.use(InertiaApp)
 Vue.use(VueMeta)
 
 InertiaProgress.init({
-    // The delay after which the progress bar will
-    // appear during navigation, in milliseconds.
-    delay: 500,
 
     // The color of the progress bar.
     color: '#1E3A8A',

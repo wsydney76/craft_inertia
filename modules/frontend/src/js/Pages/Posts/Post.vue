@@ -1,8 +1,8 @@
 <template>
     <div>
 
-        <div v-if="entry.imageUrl" class="mb-8">
-            <img :src="entry.imageUrl">
+        <div v-if="entry.featuredImage" class="mb-8">
+            <img :src="entry.featuredImage.url" :alt="entry.featuredImage.alt" :srcset="entry.featuredImage.srcset">
         </div>
 
         <div class="font-bold text-lg">
@@ -19,11 +19,10 @@
                     <h2 class="text-2xl font-bold">{{ block.text }}</h2>
                 </div>
 
-                <p v-if="block.type == 'text'" v-html="block.text">
-                </p>
+                <div v-if="block.type == 'text'" v-html="block.text"></div>
 
-                <figure v-if="block.type == 'image' && block.imageUrl">
-                    <img :src="block.imageUrl" :alt="block.alt">
+                <figure v-if="block.type == 'image'">
+                    <img :src="block.image.url" :alt="block.image.alt">
                     <figcaption v-if="block.caption">
                         {{ block.caption }}
                     </figcaption>

@@ -10,9 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --config webpack.config.js",
     "watch": "webpack  --config webpack.config.js --watch",
-    "prod": "webpack --config webpack.config.js --optimize-minimize --mode production",
-    "css-watch": "npx tailwindcss -i ./modules/frontend/src/css/app.css -o ./web/assets/inertia/css/app.css --watch",
-    "css-prod": "npx tailwindcss -i ./modules/frontend/src/css/app.css -o ./web/assets/inertia/css/app.css --minify"
+    "prod": "webpack --config webpack.config.js --optimize-minimize --mode production"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +20,7 @@
     "@inertiajs/progress": "^0.2.7",
     "@tailwindcss/typography": "^0.5.2",
     "lodash": "^4.17.21",
+    "postcss-loader": "^4.3.0",
     "tailwindcss": "^3.1.4",
     "vue": "^2.6.14",
     "vue-meta": "^2.4.0"

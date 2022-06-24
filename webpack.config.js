@@ -37,12 +37,12 @@ module.exports = (env, argv) => {
                 },
                 {
                     test: /\.css$/,
-                    loader: ['style-loader', 'css-loader']
+                    loader: ['style-loader', 'css-loader', 'postcss-loader']
                 }
             ]
         },
         plugins: [
-            new VueLoaderPlugin()
+            new VueLoaderPlugin(),
         ]
     };
 };
