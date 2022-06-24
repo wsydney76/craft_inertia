@@ -4,8 +4,6 @@ This is a Craft CMS server-side adapter for [Inertia](https://inertiajs.com).
 
 It is actually the Yii 2 Adapter (original read me below), all Yii 2 references were simply replaced by their Craft CMS counterparts.
 
-Disclaimer: Only tested for GET request (see note for CSRF below).
-
 
 # Inertia.js Yii 2 Adapter
 

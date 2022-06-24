@@ -3,7 +3,9 @@
 namespace modules\frontend\controllers;
 
 use Craft;
+use craft\db\Paginator;
 use craft\elements\Entry;
+use craft\helpers\UrlHelper;
 use modules\frontend\controllers\filters\SharedDataFilter;
 use modules\inertia\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -17,17 +19,27 @@ class PostController extends BaseController
         $query = Entry::find()->section('post');
 
         $q = Craft::$app->request->getQueryParam('q');
+        $page = Craft::$app->request->getQueryParam('page', 1);
 
         if ($q) {
             $query->search($q)->orderBy('score');
         }
 
-        $entries = $query->asArray()->all();
+        $paginator = new Paginator($query,[
+            'pageSize' => $q ? 9999 : 10,
+            'currentPage' => $page
+        ]);
+
+
+        $entries = $paginator->getPageResults();
 
         return $this->inertia('Posts/Index', [
             'title' => 'Posts',
             'entries' => $entries,
-            'q' => $q
+            'q' => $q,
+            'nextUrl' => $page < $paginator->totalPages ? UrlHelper::url('/posts', ['page' => $page + 1]) : '',
+            'prevUrl' => $page > 1 ? UrlHelper::url('/posts', ['page' => $page - 1]) : '',
+            'pageInfo' => $paginator->totalPages > 1 ? "Page {$page} of {$paginator->totalPages}" : ''
         ]);
     }
 

@@ -9,6 +9,10 @@
             </form>
         </div>
 
+        <div v-if="pageInfo" class="flex justify-end mb-2">
+            {{ pageInfo }}
+        </div>
+
         <div class="bg-white rounded shadow overflow-x-auto">
             <table class="w-full whitespace-no-wrap">
                 <tr class="text-left font-bold border-t">
@@ -40,7 +44,8 @@ export default {
     layout: Layout,
     props: {
         entries: Array,
-        q: String
+        q: String,
+        pageInfo: String
     },
 
     data() {
