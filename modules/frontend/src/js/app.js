@@ -1,13 +1,22 @@
 import Vue from 'vue'
 import VueMeta from 'vue-meta'
 import { InertiaApp } from '@inertiajs/inertia-vue'
+import { InertiaProgress } from '@inertiajs/progress'
 
 Vue.config.productionTip = false
 
 Vue.use(InertiaApp)
 Vue.use(VueMeta)
 
-let app = document.getElementById('app')
+InertiaProgress.init({
+    // The delay after which the progress bar will
+    // appear during navigation, in milliseconds.
+    delay: 500,
+
+    // The color of the progress bar.
+    color: '#1E3A8A',
+})
+
 
 new Vue({
   metaInfo: {
@@ -19,4 +28,4 @@ new Vue({
       resolveComponent: name => import(`@/Pages/${name}`).then(module => module.default),
     },
   }),
-}).$mount(app)
+}).$mount(document.getElementById('app'))
