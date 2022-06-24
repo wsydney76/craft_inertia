@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .btn {
+        @apply bg-brand-800 text-white px-4 py-2;
+    }
+    .input {
+        @apply bg-gray-50 border border-gray-500 p-2;
+    }
+}
+
+@import '~baguettebox.js/dist/baguetteBox.min.css';

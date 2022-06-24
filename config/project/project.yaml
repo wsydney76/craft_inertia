@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e # Temporary Uploads
-dateModified: 1656000779
+dateModified: 1656068112
 elementSources:
   craft\elements\Asset:
     -
@@ -183,7 +183,6 @@ meta:
     3ef62a7b-6c6d-470f-88a6-31de5a099b38: Teaser # Teaser
     3f9c2f2a-8ab0-4aba-bf4e-02d5336d14c0: Copyright # Copyright
     4d466365-d4d6-4da1-b35a-009a6fca474c: 'Public Schema' # Public Schema
-    4f4d2410-e8bd-4bef-9962-167fac851984: Features # Features
     4fc4fb07-4172-499d-8f6f-7996fd942681: 'URL 1' # URL 1
     6c2c7c89-c2ff-4ace-a3e6-aeddab27ab7b: Documents # Documents
     6d263498-0b0f-4b80-ac04-958b449ac869: Heading # Heading
@@ -276,10 +275,6 @@ plugins:
       additionalCss: "html,body {\r\n  font-size: 15px;\r\n}\r\ninput.text, textarea.text, .text > input, .text > textarea, table.editable textarea, .selectize-text > .selectize-control > .selectize-input {\r\n  font-size: 16px;\r\n}\r\n#global-sidebar {\r\n background-color: #13254B;\r\n}\r\n\r\n\r\n#main-form h2 {\r\n\tfont-size:17px;\r\n}\r\n\r\n.sidebar .heading span {\r\n  color: #264a6c;\r\n  font-size: 14px;\r\n  letter-spacing: 1px\r\n}\r\n\r\n.blocktype {\r\n\tfont-weight: bold;\r\n}\r\n"
       cssFile: ''
   elementmap:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  matrixmate:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0

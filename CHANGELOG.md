@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.4.0 2022-06-24
+
+### Added
+
+* Added progress indicator
+* Added quote, button, gallery blocks to post template
+
+### Internal
+
+* Updated npm components to the latest versions that work...
+* Cleaned up build process (a bit) npm run dev/watch/build now bundle css.
+* Added baguettebox lightbox
+
 ## 1.3.0 2022-06-23
 
 ### Added

@@ -5,6 +5,11 @@ namespace modules\inertia\web;
 use Craft;
 use modules\inertia\Inertia;
 
+/**
+ *
+ * @property-read string $inertiaVersion
+ * @property-read string $inertiaUrl
+ */
 class Controller extends \craft\web\Controller
 {
 
@@ -15,7 +20,7 @@ class Controller extends \craft\web\Controller
      * @param array $params
      * @return array|string
      */
-    public function inertia($component, $params = [])
+    public function inertia(string $component, array $params = []): array|string
     {
         $params = [
             'component' => $component,
@@ -41,7 +46,7 @@ class Controller extends \craft\web\Controller
      * @param array $params
      * @return array
      */
-    private function getInertiaProps($params = [])
+    private function getInertiaProps($params = []): array
     {
         return array_merge(
             Inertia::getInstance()->getShared(),
@@ -52,7 +57,7 @@ class Controller extends \craft\web\Controller
     /**
      * @return string
      */
-    private function getInertiaUrl()
+    private function getInertiaUrl(): string
     {
         return Craft::$app->request->getUrl();
     }
@@ -60,7 +65,7 @@ class Controller extends \craft\web\Controller
     /**
      * @return string
      */
-    private function getInertiaVersion()
+    private function getInertiaVersion(): string
     {
         return Inertia::getInstance()->getVersion();
     }

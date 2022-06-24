@@ -3,12 +3,7 @@
 namespace modules\frontend\controllers;
 
 use Craft;
-use modules\frontend\controllers\filters\SharedDataFilter;
-use modules\inertia\web\Controller;
 use yii\base\DynamicModel;
-use function compact;
-use function implode;
-use function join;
 
 class ContactController extends BaseController
 {
@@ -16,45 +11,42 @@ class ContactController extends BaseController
     public function actionForm()
     {
 
-        // TODO: Correct form handling via redirects ???
-
-        $request = Craft::$app->request;
-
-        $isPost = $request->method == 'POST';
-
-        $name = $request->getBodyParam('name');
-        $email = $request->getBodyParam('email');
-        $text = $request->getBodyParam('text');
-
-        if ($isPost) {
-            $model = DynamicModel::validateData(compact('name', 'email', 'text'), [
-                ['name', 'required'],
-                ['name', 'string', 'max' => 30],
-                ['email', 'required'],
-                ['email', 'email'],
-                ['email', 'string', 'max' => 50],
-                ['text', 'required'],
-                ['text', 'string', 'min' => 20],
-            ]);
-
-            if ($model->hasErrors()) {
-
-                Craft::$app->session->setError(implode(' // ', $model->firstErrors));
-                return Craft::$app->response->redirect('contact');
-            }
-
-            Craft::$app->session->setNotice('Message sent');
-            return Craft::$app->response->redirect('');
-        }
+        $user = Craft::$app->user->identity;
 
         return $this->inertia('Contact/Form', [
             'title' => 'Contact',
             'message' => [
-                'name' => '',
-                'eMail' => '',
+                'name' => $user->name ?? '',
+                'email' => $user->email ?? '',
                 'text' => '',
-                'token' => $request->getCsrfToken()
-            ]
+            ],
+            'errors' => Craft::$app->session->getFlash('errors', [], true)
         ]);
+    }
+
+    public function actionSend()
+    {
+        $request = Craft::$app->request;
+
+        $model = DynamicModel::validateData([
+            'name' => $request->getBodyParam('name'),
+            'email' => $request->getBodyParam('email'),
+            'text' => $request->getBodyParam('text')
+        ], [
+            [['name', 'email', 'text'], 'required'],
+            ['name', 'string', 'max' => 30],
+            ['email', 'email'],
+            ['text', 'string', 'min' => 30],
+        ]);
+
+        if ($model->hasErrors()) {
+            Craft::$app->session->setError("Could not send message");
+            Craft::$app->session->setFlash('errors', $model->errors);
+            return Craft::$app->response->redirect('contact');
+        }
+
+
+        Craft::$app->session->setNotice("Thank you, your message would have been sent, but sorry, this is only a demo...");
+        return Craft::$app->response->redirect('');
     }
 }

@@ -14,65 +14,9 @@ fieldLayouts:
             uid: 3330f7cb-0744-4366-ba26-91bb5ed4d228
             warning: null
             width: 75
-          -
-            fieldUid: bad8f5ab-fcf4-4fec-9ade-7652b14f376e # Level
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 58d2eb5d-4a08-40a8-b2fc-634942a746e6
-            warning: null
-            width: 25
         name: Content
         uid: 8d22c5a9-7386-4bfe-9d2e-6533be04082a
 fields:
-  bad8f5ab-fcf4-4fec-9ade-7652b14f376e: # Level
-    columnSuffix: null
-    contentColumnType: string
-    fieldGroup: null
-    handle: tag
-    instructions: null
-    name: Level
-    searchable: false
-    settings:
-      options:
-        -
-          __assoc__:
-            -
-              - label
-              - H2
-            -
-              - value
-              - h2
-            -
-              - default
-              - '1'
-        -
-          __assoc__:
-            -
-              - label
-              - H3
-            -
-              - value
-              - h3
-            -
-              - default
-              - ''
-        -
-          __assoc__:
-            -
-              - label
-              - H4
-            -
-              - value
-              - h4
-            -
-              - default
-              - ''
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\fields\Dropdown
   c7d0c14f-5533-4bdc-863d-cedbbb544960: # Text
     columnSuffix: null
     contentColumnType: text

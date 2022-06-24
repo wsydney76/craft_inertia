@@ -21,7 +21,7 @@ module.exports = (env, argv) => {
         ],
         output: {
             path: PATHS.build,
-            filename: config.production ? 'assets/inertia/js/app.min.js' : 'assets/inertia/js/app.js'
+            filename: config.production ? 'assets/inertia/js/app.js' : 'assets/inertia/js/app.js'
         },
         resolve: {
             extensions: ['.js', '.vue', '.json'],
@@ -37,12 +37,12 @@ module.exports = (env, argv) => {
                 },
                 {
                     test: /\.css$/,
-                    loader: ['style-loader', 'css-loader']
+                    loader: ['style-loader', 'css-loader', 'postcss-loader']
                 }
             ]
         },
         plugins: [
-            new VueLoaderPlugin()
+            new VueLoaderPlugin(),
         ]
     };
 };
