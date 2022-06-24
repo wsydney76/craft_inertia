@@ -29,3 +29,4 @@ It is not a goal of this PoC to demonstrate how to build well designed, well str
 
 It is just to show how routing works and how data is sent back and forth between client and server.
 
+Also not supporting multiple sites.

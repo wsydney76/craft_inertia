@@ -49,7 +49,7 @@ export default {
     layout: Layout,
     props: {
         message: Object,
-        errors: Array
+        errors: Array|Object
     },
 
     data() {
