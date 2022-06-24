@@ -4,7 +4,7 @@
     "description": "Inertia proof of concept",
     "license": "Unlicense",
     "require": {
-        "craftcms/cms": "4.0.5.1",
+        "craftcms/cms": "4.0.5.2",
         "doublesecretagency/craft-cpcss": "2.5.0",
         "fakerphp/faker": "^1.15",
         "tebe/yii2-inertia": "^1.0",
