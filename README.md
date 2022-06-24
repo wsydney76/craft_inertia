@@ -19,7 +19,6 @@ Hint: Not all configured sections/fields/block types are covered by the app.
 ## Todos:
 
 * Security: Check/fix CSRF protection (see in adapter description) and check for possible conflicts with Crafts Control Panel.
-* Security: Check/fix HTML encoding in texts
 * Updating Vue / Inertia to current versions without changing code breaks the app. More Vue/Inertia knowledge is needed here.
 * Remove unused stuff.
 * Clean up build process (currently there are two separate jobs for creating JS and CSS. Also check for unused components)
