@@ -18,4 +18,9 @@ class SiteController extends BaseController
             'buttons' => $siteInfo->siteIntroButtons
         ]);
     }
+
+    public function actionEmpty()
+    {
+        return $this->inertia('Site/Empty');
+    }
 }
