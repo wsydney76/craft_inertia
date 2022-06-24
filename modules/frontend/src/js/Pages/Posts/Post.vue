@@ -19,8 +19,7 @@
                     <h2 class="text-2xl font-bold">{{ block.text }}</h2>
                 </div>
 
-                <p v-if="block.type == 'text'" v-html="block.text">
-                </p>
+                <div v-if="block.type == 'text'" v-html="block.text"></div>
 
                 <figure v-if="block.type == 'image'">
                     <img :src="block.image.url" :alt="block.image.alt">

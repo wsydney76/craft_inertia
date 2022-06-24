@@ -11,9 +11,6 @@ Vue.use(InertiaApp)
 Vue.use(VueMeta)
 
 InertiaProgress.init({
-    // The delay after which the progress bar will
-    // appear during navigation, in milliseconds.
-    delay: 500,
 
     // The color of the progress bar.
     color: '#1E3A8A',
