@@ -6,8 +6,8 @@
 
                 <div class="md:flex">
                     <div class="bg-brand-900 md:flex-shrink-0 md:w-56 px-6 py-4 flex items-center">
-                        <inertia-link class="mt-1 text-white text-xl" :href="$page.props.siteUrl">
-                            {{ $page.props.siteName }}
+                        <inertia-link class="mt-1 text-white text-xl" :href="$page.props.siteInfo.siteUrl">
+                            {{ $page.props.siteInfo.siteName }}
                         </inertia-link>
                     </div>
                         <div class="px-12 py-4 flex justify-between items-center w-full border-b border-gray-500 bg-gray-100">

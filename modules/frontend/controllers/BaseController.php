@@ -16,7 +16,9 @@ class BaseController extends Controller
     public function beforeAction($action): bool
     {
 
-        Inertia::getInstance()->share([
+        $inertia = Inertia::getInstance();
+
+        $inertia->share([
             'notice' => Craft::$app->session->getNotice(),
             'error' => Craft::$app->session->getError(),
         ]);
@@ -26,11 +28,13 @@ class BaseController extends Controller
         if (!$this->only) {
             $siteInfo = GlobalSet::find()->handle('siteInfo')->one();
 
-            Inertia::getInstance()->share([
-                'siteName' => $siteInfo->siteName ?? 'Inertia',
-                'siteUrl' => '/',
-                'mainNav' => Craft::$app->config->custom->siteNav,
-                'copyright' => $siteInfo->copyright,
+            $inertia->share([
+                'siteInfo' => [
+                    'siteName' => $siteInfo->siteName ?? 'Inertia',
+                    'siteUrl' => '/',
+                    'mainNav' => Craft::$app->config->custom->siteNav,
+                    'copyright' => $siteInfo->copyright,
+                ]
             ]);
         }
 

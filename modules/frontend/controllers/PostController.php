@@ -5,10 +5,7 @@ namespace modules\frontend\controllers;
 use Craft;
 use craft\db\Paginator;
 use craft\elements\Entry;
-use craft\helpers\Template;
 use craft\helpers\UrlHelper;
-use modules\frontend\controllers\filters\SharedDataFilter;
-use modules\inertia\web\Controller;
 use yii\web\NotFoundHttpException;
 
 class PostController extends BaseController
