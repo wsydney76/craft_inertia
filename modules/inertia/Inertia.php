@@ -14,7 +14,7 @@ class Inertia extends Module
 {
     /** @var array */
     public $assetsDirs = [
-        '@webroot/assets'
+        '@webroot/assets/inertia'
     ];
 
     /** @var string */

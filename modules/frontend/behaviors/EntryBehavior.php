@@ -3,11 +3,10 @@
 namespace modules\frontend\behaviors;
 
 use Craft;
+use craft\elements\Asset;
 use craft\elements\Entry;
-use craft\helpers\HtmlPurifier;
 use modules\frontend\helpers\HtmlHelper;
 use yii\base\Behavior;
-use function nl2br;
 
 class EntryBehavior extends Behavior
 {
@@ -17,12 +16,15 @@ class EntryBehavior extends Behavior
         /** @var Entry $entry */
         $entry = $this->owner;
 
-        $featuredImage = $entry->featuredImage->one();
-        if ($featuredImage) {
-            $featuredImage->setTransform(['width' => 2000, 'height' => 400, 'format' => 'webp']);
-        }
+        $featuredImageTransform = ['width' => 2000, 'height' => 400, 'format' => 'webp'];
+        $blockImageTransform = ['width' => 768, 'height' => 400, 'format' => 'webp'];
 
-        $blocks = $entry->bodyContent->all();
+        $blocks = $entry->bodyContent
+            ->with([
+                ['bodyContent:image', ['withTransforms' => [$blockImageTransform]]],
+                ['bodyContent:images', ['withTransforms' => ['galleryThumbnail', 'galleryFullHeight']]]
+            ])
+            ->all();
 
         $blockData = [];
 
@@ -52,16 +54,14 @@ class EntryBehavior extends Behavior
                         $blockData[] = [
                             'type' => 'image',
                             'caption' => $block->caption,
-                            'image' => [
-                                'url' => $image->getUrl(),
-                                'alt' => $image->altText ?: $image->title
-                            ]
+                            'image' => $this->getImageData($image, $blockImageTransform)
                         ];
                     }
                     break;
                 }
 
-                case "quote": {
+                case "quote":
+                {
                     $blockData[] = [
                         'type' => 'quote',
                         'text' => HtmlHelper::getSafeHtml($block->text),
@@ -70,7 +70,8 @@ class EntryBehavior extends Behavior
                     break;
                 }
 
-                case "button": {
+                case "button":
+                {
                     $target = $block->target->one();
                     if ($target) {
                         $blockData[] = [
@@ -82,8 +83,9 @@ class EntryBehavior extends Behavior
                     break;
                 }
 
-                case "gallery": {
-                    $images = $block->images->withTransforms(['galleryThumbnail','galleryFullHeight'])->all();
+                case "gallery":
+                {
+                    $images = $block->images->withTransforms(['galleryThumbnail', 'galleryFullHeight'])->all();
 
                     if ($images) {
                         $imageData = [];
@@ -115,13 +117,26 @@ class EntryBehavior extends Behavior
             'postDate' => $entry->postDate ? Craft::$app->formatter->asDate($entry->postDate) : '',
             'expiryDate' => $entry->expiryDate ? Craft::$app->formatter->asDate($entry->expiryDate) : 'n/a',
             'teaser' => $entry->teaser,
-            'featuredImage' => $featuredImage ? [
-                'url' => $featuredImage->getUrl(),
-                'alt' => $featuredImage->altText ?: $featuredImage->title,
-                'copyright' => $featuredImage->copyright,
-                'srcset' => $featuredImage->getSrcset([1024, 640, 480])
-            ] : [],
+            'featuredImage' => $this->getImageData($entry->featuredImage->one(), $featuredImageTransform, [1024, 640, 480]),
             'blocks' => $blockData
+        ];
+    }
+
+    protected function getImageData(Asset $image, mixed $transform, $srcset = ''): array
+    {
+        if (!$image) {
+            return [];
+        }
+
+        $image->setTransform($transform);
+
+        return [
+            'url' => $image->getUrl(),
+            'alt' => $image->altText ?: $image->title,
+            'copyright' => $image->copyright,
+            'srcset' => $srcset ? $image->getSrcset($srcset) : '',
+            'width' => $image->width,
+            'height' => $image->height
         ];
     }
 }

@@ -1,6 +1,6 @@
 # Craft Inertia
 
-Updated older Proof of Concept for a Vue/Inertia app powered by Craft CMS.
+Updated older Proof of Concept for a Vue 2/Inertia app powered by Craft CMS.
 
 Adapter `modules\inertia` based on [Yii2 Adapter](https://www.yiiframework.com/extension/tebe/yii2-inertia).
 
@@ -22,14 +22,14 @@ Hint: Not all configured sections/fields/block types are covered by the app.
 * Remove unused stuff.
 * Clean up build process (Also check for unused components)
 * Redesign layout, now it looks more than an application than a pretty website.
+* Add cache busting for assets
+* Vue 3
 
 ## Out of scope
 
-It is not a goal of this PoC to demonstrate how to build well-designed, well-structured Vue components.
-
-It is just to show how routing works and how data is sent back and forth between client and server.
-
-Also, the app does not support multiple sites.
+* It is not a goal of this PoC to demonstrate how to build well-designed, well-structured Vue components. It is just to show how routing works and how data is sent back and forth between client and server.
+* Best CSS practices
+* Also, the app does not support multiple sites.
 
 ## Getting started (Short version)
 
