@@ -5,6 +5,7 @@ namespace modules\frontend\controllers;
 use Craft;
 use craft\db\Paginator;
 use craft\elements\Entry;
+use craft\helpers\Template;
 use craft\helpers\UrlHelper;
 use modules\frontend\controllers\filters\SharedDataFilter;
 use modules\inertia\web\Controller;
@@ -39,7 +40,7 @@ class PostController extends BaseController
             'entries' => array_map(fn($entry) => [
                 'id' => $entry->id,
                 'title' => $entry->title,
-                'url' => $entry->url
+                'url' => $entry->inertiaUrl
             ], $paginator->getPageResults()),
         ]);
     }
@@ -65,8 +66,9 @@ class PostController extends BaseController
         return $this->inertia('Posts/Post', [
             'title' => $entry['title'],
             'entry' => $entry->getEntryData(),
-            'nextUrl' => $nextEntry ? $nextEntry->getUrl() : '',
-            'prevUrl' => $prevEntry ? $prevEntry->getUrl() : ''
+            'nextUrl' => $nextEntry ? $nextEntry->getInertiaUrl() : '',
+            'prevUrl' => $prevEntry ? $prevEntry->getInertiaUrl() : ''
         ]);
     }
+
 }

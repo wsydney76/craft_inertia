@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.5.2 2022-06-25
+## 1.5.x 2022-06-25
 
 This is the **first final version** of this Proof of Concept.
 
@@ -8,11 +8,13 @@ This is the **first final version** of this Proof of Concept.
 
 * Pagination for post index
 * Short install instructions in README
+* Added 'random Posts' as an example for only partially updating a page.
 
 ### Changed
 
 * Minor layout improvements
 * Moved Site Nav to custom config
+* Stop running Craft in headless mode
 
 ### Fixed
 
@@ -26,6 +28,8 @@ This is the **first final version** of this Proof of Concept.
 ### Internal
 
 * ImageTag and Blocks vue components
+* Cleanup controllers / custom settings
+* User partial data loading when staying in the same component
 
 ## 1.4.0 2022-06-24
 

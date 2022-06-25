@@ -10,7 +10,7 @@ previewTargets:
         - 'Primary entry page'
       -
         - urlFormat
-        - '{url}?id={id}'
+        - '{inertiaUrl}?id={id}'
       -
         - refresh
         - '1'
@@ -18,7 +18,7 @@ propagationMethod: all
 siteSettings:
   97e0b749-86e3-49f1-918e-9b88758928f4: # English
     enabledByDefault: true
-    hasUrls: true
+    hasUrls: false
     template: null
-    uriFormat: 'posts/{slug}'
+    uriFormat: null
 type: channel

@@ -13,25 +13,25 @@ use yii\web\Response;
 class Inertia extends Module
 {
     /** @var array */
-    public $assetsDirs = [
-        '@webroot/assets/inertia'
-    ];
+    public $assetsDirs = [];
 
     /** @var string */
     public $shareKey = '__inertia__';
 
     /** @var string */
-    public $view = 'inertia/inertia.twig';
+    public $view = '';
 
     /**
      * @inheritDoc
      */
     public function init()
     {
-
         Craft::setAlias('@modules/inertia', $this->getBasePath());
 
         parent::init();
+
+        $this->assetsDirs = Craft::$app->config->custom->assetDirs ?? ['@webroot/assets'];
+        $this->view = Craft::$app->config->custom->frontendView ?? 'inertia/inertia.twig';
 
         Event::on(
             View::class,
@@ -116,6 +116,7 @@ class Inertia extends Module
         return md5(implode('', $hashes));
     }
 
+
     /**
      * @param array|string $key
      * @param array/null $value
@@ -155,7 +156,7 @@ class Inertia extends Module
     {
         $files = [];
         $dir = dir($directory);
-            while (false !== ($file = $dir->read())) {
+            while (($file = $dir->read()) !== false) {
             if ($file != '.' and $file != '..') {
                 if (is_dir($directory . '/' . $file)) {
                     $files[] = $this->hashDirectory($directory . '/' . $file);

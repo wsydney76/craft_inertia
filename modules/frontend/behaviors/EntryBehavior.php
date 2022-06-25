@@ -5,11 +5,21 @@ namespace modules\frontend\behaviors;
 use Craft;
 use craft\elements\Asset;
 use craft\elements\Entry;
+use craft\helpers\UrlHelper;
 use modules\frontend\helpers\HtmlHelper;
 use yii\base\Behavior;
 
 class EntryBehavior extends Behavior
 {
+
+    public function getInertiaUrl()
+    {
+        /** @var Entry $entry */
+        $entry = $this->owner;
+
+        return UrlHelper::siteUrl('posts/' . $entry->slug);
+    }
+
     public function getEntryData()
     {
 
@@ -76,7 +86,7 @@ class EntryBehavior extends Behavior
                     if ($target) {
                         $blockData[] = [
                             'type' => 'button',
-                            'url' => $target->getUrl(),
+                            'url' => $target->getInertiaUrl(),
                             'caption' => $block->caption ?: $target->title
                         ];
                     }
