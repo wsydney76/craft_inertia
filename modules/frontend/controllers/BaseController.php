@@ -13,6 +13,11 @@ class BaseController extends Controller
 
     public function beforeAction($action): bool
     {
+        
+        Inertia::getInstance()->share([
+            'notice' => Craft::$app->session->getNotice(),
+            'error' => Craft::$app->session->getError(),
+        ]);
 
         if (!Craft::$app->request->headers->has('X-Inertia-Partial-Data')) {
             $siteInfo = GlobalSet::find()->handle('siteInfo')->one();
@@ -21,8 +26,6 @@ class BaseController extends Controller
                 'siteName' => $siteInfo->siteName ?? 'Inertia',
                 'siteUrl' => '/',
                 'mainNav' => Craft::$app->config->custom->siteNav,
-                'notice' => Craft::$app->session->getNotice(),
-                'error' => Craft::$app->session->getError(),
                 'copyright' => $siteInfo->copyright,
             ]);
         }
