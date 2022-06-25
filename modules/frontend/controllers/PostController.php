@@ -70,4 +70,20 @@ class PostController extends BaseController
             'prevUrl' => $prevEntry ? $prevEntry->getInertiaUrl() : ''
         ]);
     }
+
+    public function actionRandom() {
+        $entries = Entry::find()
+            ->section('post')
+            ->limit(3)
+            ->orderBy('rand()')
+            ->all();
+
+        return $this->inertia('Site/Index', [
+            'randomPosts' => array_map(fn($entry) => [
+                'id' => $entry->id,
+                'title' => $entry->title,
+                'url' => $entry->inertiaUrl
+            ], $entries)
+        ]);
+    }
 }
