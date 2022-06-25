@@ -9,10 +9,11 @@
         </inertia-link>
 
         <div class="mt-16">
-            <button class="btn" @click="getRandomPosts()">
-                <div v-if="!randomPosts">Show some random posts</div>
-                <div v-else>Refresh random posts</div>
-            </button>
+
+            <inertia-link class="btn" :href="$page.url" :only="['randomPosts']">
+                <template v-if="!randomPosts">Show some random posts</template>
+                <template v-else>Refresh random posts</template>
+            </inertia-link>
 
             <div class="mt-4" v-for="post in randomPosts" :key="post.id">
                 <inertia-link :href="post.url">{{ post.title }}</inertia-link>
@@ -37,13 +38,6 @@ export default {
         text: String,
         buttons: Array,
         randomPosts: Array
-    },
-    methods: {
-        getRandomPosts() {
-            this.$inertia.get(this.$page.url, {}, {
-              only: ['randomPosts']
-            });
-        }
     }
 }
 </script>
