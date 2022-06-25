@@ -1,6 +1,8 @@
 # Changelog
 
-## 1.5.1 2022-06-24
+## 1.5.2 2022-06-25
+
+This is the **first final version** of this Proof of Concept.
 
 ### Added
 
@@ -9,12 +11,21 @@
 
 ### Changed
 
-* Layout improvements
+* Minor layout improvements
+* Moved Site Nav to custom config
 
 ### Fixed
 
 * Fixed a bug where the main menu was hidden on mobile
 * Fixed a couple install issues
+
+### Updated
+
+* Craft hotfix 4.0.5.2
+
+### Internal
+
+* ImageTag and Blocks vue components
 
 ## 1.4.0 2022-06-24
 
