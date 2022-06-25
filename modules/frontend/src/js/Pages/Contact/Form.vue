@@ -48,6 +48,7 @@ export default {
     },
     layout: Layout,
     props: {
+        title: String,
         message: Object,
         errors: Array|Object
     },

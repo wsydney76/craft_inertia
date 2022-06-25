@@ -11,7 +11,7 @@
                         </inertia-link>
                     </div>
                         <div class="px-12 py-4 flex justify-between items-center w-full border-b border-gray-500 bg-gray-100">
-                        <h1 class="font-bold text-3xl"> {{ $page.props.title }}</h1>
+                        <h1 class="font-bold text-2xl text-brand-800"> {{ $page.props.title }}</h1>
                         <div class="flex space-x-2">
                             <div v-if="$page.props.prevUrl">
                                 <inertia-link class="btn" :href="$page.props.prevUrl">Previous</inertia-link>
@@ -25,7 +25,7 @@
 
                 <div class="flex flex-col md:flex-row flex-grow overflow-hidden">
                     <main-menu :url="url()"
-                               class="bg-brand-800 w-full flex-shrink-0 md:w-56 p-4 md:p-12 overflow-y-auto"/>
+                               class="bg-brand-800 w-full flex-shrink-0 md:w-56 p-4 md:p-6 overflow-y-auto"/>
                     <div class="flex-1 overflow-hidden px-4 py-8 md:px-12 py-0 overflow-y-auto" scroll-region="true">
 
                         <div v-if="$page.props.error" class="-mx-4 md:-mx-12 mb-8 bg-red-500 text-white px-12 py-2">

@@ -21,6 +21,7 @@ export default {
     },
     layout: Layout,
     props: {
+        title: String,
         text: String,
         buttons: Array
     }

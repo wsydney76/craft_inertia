@@ -25,21 +25,22 @@ class PostController extends BaseController
             $query->search($q)->orderBy('score');
         }
 
-        $paginator = new Paginator($query,[
+        $paginator = new Paginator($query, [
             'pageSize' => $q ? 9999 : 10,
             'currentPage' => $page
         ]);
 
-
-        $entries = $paginator->getPageResults();
-
         return $this->inertia('Posts/Index', [
             'title' => 'Posts',
-            'entries' => $entries,
             'q' => $q,
             'nextUrl' => $page < $paginator->totalPages ? UrlHelper::url('/posts', ['page' => $page + 1]) : '',
             'prevUrl' => $page > 1 ? UrlHelper::url('/posts', ['page' => $page - 1]) : '',
-            'pageInfo' => $paginator->totalPages > 1 ? "Page {$page} of {$paginator->totalPages}" : ''
+            'pageInfo' => $paginator->totalPages > 1 ? "Page {$page} of {$paginator->totalPages}" : '',
+            'entries' => array_map(fn($entry) => [
+                'id' => $entry->id,
+                'title' => $entry->title,
+                'url' => $entry->url
+            ], $paginator->getPageResults()),
         ]);
     }
 
