@@ -23,7 +23,7 @@
                 </cite>
             </blockquote>
 
-            <inertia-link v-if="block.type == 'button'" class="btn inline-block no-underline" :href="block.url">
+            <inertia-link v-if="block.type == 'button'" class="btn inline-block no-underline" :href="block.url" :only="['post']">
                 {{ block.caption }}
             </inertia-link>
 

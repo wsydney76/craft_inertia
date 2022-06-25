@@ -35,9 +35,7 @@ class Controller extends \craft\web\Controller
 
         $customView = Craft::$app->config->custom->frontendView ?? null;
 
-        $view = $customView ?: Inertia::getInstance()->view;
-
-        return Craft::$app->view->renderTemplate($view, [
+        return Craft::$app->view->renderTemplate(Inertia::getInstance()->view, [
             'page' => $params
         ]);
     }

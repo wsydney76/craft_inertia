@@ -5,5 +5,8 @@ return [
         ['label' => 'Posts', 'url' => '/posts'],
         ['label' => 'Topics (tbd.)', 'url' => '/topics'],
         ['label' => 'Contact', 'url' => '/contact'],
+    ],
+    'assetDirs' => [
+        '@webroot/assets/inertia'
     ]
 ];

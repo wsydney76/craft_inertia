@@ -14,10 +14,10 @@
                         <h1 class="font-bold text-2xl text-brand-800"> {{ $page.props.title }}</h1>
                         <div class="flex space-x-2">
                             <div v-if="$page.props.prevUrl">
-                                <inertia-link class="btn" :href="$page.props.prevUrl">Previous</inertia-link>
+                                <inertia-link class="btn" :href="$page.props.prevUrl" :only="['posts']">Previous</inertia-link>
                             </div>
                             <div v-if="$page.props.nextUrl">
-                                <inertia-link class="btn" :href="$page.props.nextUrl">Next</inertia-link>
+                                <inertia-link class="btn" :href="$page.props.nextUrl" :only="['posts']">Next</inertia-link>
                             </div>
                         </div>
                     </div>
