@@ -11,15 +11,19 @@ class BaseController extends Controller
 {
     public array|int|bool $allowAnonymous = true;
 
+    public mixed $only = [];
+
     public function beforeAction($action): bool
     {
-        
+
         Inertia::getInstance()->share([
             'notice' => Craft::$app->session->getNotice(),
             'error' => Craft::$app->session->getError(),
         ]);
 
-        if (!Craft::$app->request->headers->has('X-Inertia-Partial-Data')) {
+        $this->only = Craft::$app->request->headers->get('X-Inertia-Partial-Data');
+
+        if (!$this->only) {
             $siteInfo = GlobalSet::find()->handle('siteInfo')->one();
 
             Inertia::getInstance()->share([

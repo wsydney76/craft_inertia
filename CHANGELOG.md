@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.5.2 2022-06-25
+## 1.5.x 2022-06-25
 
 This is the **first final version** of this Proof of Concept.
 
@@ -8,6 +8,7 @@ This is the **first final version** of this Proof of Concept.
 
 * Pagination for post index
 * Short install instructions in README
+* Added 'random Posts' as an example for only partially updating a page.
 
 ### Changed
 

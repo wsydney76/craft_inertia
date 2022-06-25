@@ -8,6 +8,18 @@
                       :href="button.url">{{ button.label }}
         </inertia-link>
 
+        <div class="mt-16">
+            <button class="btn" @click="getRandomPosts()">
+                <div v-if="!randomPosts">Show some random posts</div>
+                <div v-else>Refresh random posts</div>
+            </button>
+
+            <div class="mt-4" v-for="post in randomPosts" :key="post.id">
+                <inertia-link :href="post.url">{{ post.title }}</inertia-link>
+            </div>
+
+        </div>
+
     </div>
 </template>
 
@@ -23,7 +35,15 @@ export default {
     props: {
         title: String,
         text: String,
-        buttons: Array
+        buttons: Array,
+        randomPosts: Array
+    },
+    methods: {
+        getRandomPosts() {
+            this.$inertia.get(this.$page.url, {}, {
+              only: ['randomPosts']
+            });
+        }
     }
 }
 </script>
