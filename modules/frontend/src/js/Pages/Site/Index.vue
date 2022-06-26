@@ -8,7 +8,7 @@
                       :href="button.url">{{ button.label }}
         </inertia-link>
 
-        <div class="mt-16 border border-gray-500 shadow-xl p-8 w-[500px]">
+        <div class="mt-16  w-[500px] border border-gray-500 shadow-xl bg-white p-8">
 
             <inertia-link class="btn" :href="$page.url" :only="['randomPosts']">
                 <template v-if="!randomPosts">Show some random posts</template>
