@@ -8,15 +8,19 @@ use craft\helpers\UrlHelper;
 use modules\inertia\Inertia;
 use modules\inertia\web\Controller;
 use yii\base\InvalidConfigException;
+use function explode;
+use function in_array;
 
 class BaseController extends Controller
 {
     public array|int|bool $allowAnonymous = true;
 
-    public mixed $only = [];
+    public ?string $only = '';
 
     public function beforeAction($action): bool
     {
+
+        // $this->requireAdmin();
 
         $inertia = Inertia::getInstance();
         if (!$inertia) {
@@ -28,7 +32,9 @@ class BaseController extends Controller
             'error' => Craft::$app->session->getError(),
         ]);
 
-        $this->only = Craft::$app->request->headers->get('X-Inertia-Partial-Data');
+        if (Craft::$app->request->headers->has('X-Inertia-Partial-Data')) {
+            $this->only = Craft::$app->request->headers->get('X-Inertia-Partial-Data');
+        }
 
         if (!$this->only) {
             $siteInfo = GlobalSet::find()->handle('siteInfo')->one();
@@ -44,5 +50,9 @@ class BaseController extends Controller
         }
 
         return true;
+    }
+
+    public function checkOnly($key) {
+        return in_array($key, explode(',', $this->only), true);
     }
 }

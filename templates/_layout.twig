@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ craft.app.language }}" class="h-full bg-gray-200">
+
+<head>
+    <base href="{{ siteUrl }}">
+    <meta charset="{{ craft.app.charset }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Inertia</title>
+
+    {% set icon = siteInfo.siteIcon.one %}
+    {% if icon %}
+        <link rel="icon" href="{{ icon.url }}">
+    {% endif %}
+</head>
+
+<body>
+
+{% block content %}
+
+{% endblock %}
+
+<script src="/assets/inertia/js/app.js"></script>
+
+</body>
+</html>
+

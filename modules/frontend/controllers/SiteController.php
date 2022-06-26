@@ -8,10 +8,9 @@ use modules\frontend\helpers\HtmlHelper;
 
 class SiteController extends BaseController
 {
-    public function actionIndex()
+    public function actionIndex(): array|string
     {
-
-        if ($this->only == 'randomPosts') {
+        if ($this->checkOnly('randomPosts')) {
             return $this->inertia('Site/Index', [
                 'randomPosts' => $this->_getRandomPosts()
             ]);
@@ -28,11 +27,11 @@ class SiteController extends BaseController
         ]);
     }
 
-    protected function _getRandomPosts()
+    protected function _getRandomPosts(): array
     {
         $entries = Entry::find()->section('post')->limit(8)->orderBy('rand()')->all();
 
-        return array_map(fn($entry) => [
+        return array_map(static fn($entry) => [
             'id' => $entry->id,
             'title' => $entry->title,
             'url' => $entry->inertiaUrl,

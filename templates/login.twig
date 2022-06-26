@@ -1,0 +1,41 @@
+{% extends "_layout.twig" %}
+
+{% block content %}
+    <div class="p-6 bg-brand-600 min-h-screen flex justify-center items-center">
+        <div class="w-full max-w-md">
+            <form class="mt-8 bg-white rounded-lg shadow-xl p-8 space-y-4 overflow-hidden" method="post" accept-charset="UTF-8">
+                {{ csrfInput() }}
+                {{ actionInput('users/login') }}
+
+                <div>
+                    <label for="loginName">Username or email</label>
+                    <br/>
+                    {{ input('text', 'loginName', craft.app.user.rememberedUsername, {
+                        class: 'border border-black p-2',
+                        id: 'loginName',
+                        autocomplete: 'username'
+                    }) }}
+                </div>
+
+                <div>
+                    <label for="password">Password</label>
+                    <br/>
+                    {{ input('password', 'password', null, {
+                        class: 'border border-black p-2',
+                        id: 'password',
+                    }) }}
+                </div>
+
+
+                <div>
+                    <button class="btn" type="submit">Login</button>
+                </div>
+
+                {% if errorMessage is defined %}
+                    <p class="text-red.800">{{ errorMessage }}</p>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
