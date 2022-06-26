@@ -8,15 +8,15 @@
                       :href="button.url">{{ button.label }}
         </inertia-link>
 
-        <div class="mt-16">
+        <div class="mt-16 border border-gray-500 shadow-xl p-8 w-[500px]">
 
             <inertia-link class="btn" :href="$page.url" :only="['randomPosts']">
                 <template v-if="!randomPosts">Show some random posts</template>
                 <template v-else>Refresh random posts</template>
             </inertia-link>
 
-            <div class="mt-4" v-for="post in randomPosts" :key="post.id">
-                <inertia-link :href="post.url">{{ post.title }}</inertia-link>
+            <div v-if="randomPosts" class="mt-8 space-y-4">
+                <inertia-link class="block"  v-for="post in randomPosts" :key="post.id" :href="post.url">{{ post.title }}</inertia-link>
             </div>
 
         </div>

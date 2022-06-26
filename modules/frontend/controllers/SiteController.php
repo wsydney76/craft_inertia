@@ -10,20 +10,20 @@ class SiteController extends BaseController
 {
     public function actionIndex()
     {
-        $siteInfo = GlobalSet::find()->handle('siteInfo')->one();
 
         if ($this->only == 'randomPosts') {
-            $entries = Entry::find()->section('post')->limit(6)->orderBy('rand()')->all();
+            $entries = Entry::find()->section('post')->limit(8)->orderBy('rand()')->all();
 
             return $this->inertia('Site/Index', [
-               'randomPosts' =>  array_map(fn($entry) => [
-                   'id' => $entry->id,
-                   'title' => $entry->title,
-                   'url' => $entry->inertiaUrl,
-               ], $entries),
-                'notice' => 'This is an example for partially refreshing the page.'
+                'randomPosts' => array_map(fn($entry) => [
+                    'id' => $entry->id,
+                    'title' => $entry->title,
+                    'url' => $entry->inertiaUrl,
+                ], $entries)
             ]);
         }
+
+        $siteInfo = GlobalSet::find()->handle('siteInfo')->one();
 
         return $this->inertia('Site/Index', [
             'title' => $siteInfo->siteIntoTitle,
