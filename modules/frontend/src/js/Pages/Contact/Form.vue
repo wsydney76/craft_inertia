@@ -65,7 +65,7 @@ export default {
 
     methods: {
         submit() {
-            this.$inertia.post('contact', this.form)
+            this.$inertia.post('contact', this.form, {only: ['formData']})
         }
     }
 }

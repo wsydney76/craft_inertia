@@ -40,11 +40,11 @@ class ContactController extends BaseController
         ]);
 
         if ($model->hasErrors()) {
-            Craft::$app->session->setError("Could not send message");
-            Craft::$app->session->setFlash('errors', $model->errors);
-            return Craft::$app->response->redirect('contact');
+            return $this->inertia('Contact/Form', [
+                'error' => "Could not send message",
+                'errors' => $model->errors
+            ]);
         }
-
 
         Craft::$app->session->setNotice("Thank you, your message would have been sent, but sorry, this is only a demo...");
         return Craft::$app->response->redirect('');
