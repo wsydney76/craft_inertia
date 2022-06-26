@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div class="mb-8" v-html="text"></div>
+        <div class="mb-8" v-html="dashboardData.text"></div>
 
-        <inertia-link v-for="button in buttons"
+        <inertia-link v-for="button in dashboardData.buttons"
                       class="btn mr-2"
                       :key="button.url"
                       :href="button.url">{{ button.label }}
@@ -35,8 +35,7 @@ export default {
     layout: Layout,
     props: {
         title: String,
-        text: String,
-        buttons: Array,
+        dashboardData: Object,
         randomPosts: Array
     }
 }

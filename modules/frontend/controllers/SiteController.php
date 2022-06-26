@@ -12,14 +12,8 @@ class SiteController extends BaseController
     {
 
         if ($this->only == 'randomPosts') {
-            $entries = Entry::find()->section('post')->limit(8)->orderBy('rand()')->all();
-
             return $this->inertia('Site/Index', [
-                'randomPosts' => array_map(fn($entry) => [
-                    'id' => $entry->id,
-                    'title' => $entry->title,
-                    'url' => $entry->inertiaUrl,
-                ], $entries)
+                'randomPosts' => $this->_getRandomPosts()
             ]);
         }
 
@@ -27,13 +21,21 @@ class SiteController extends BaseController
 
         return $this->inertia('Site/Index', [
             'title' => $siteInfo->siteIntoTitle,
-            'text' => HtmlHelper::getSafeHtml($siteInfo->siteIntroText),
-            'buttons' => $siteInfo->siteIntroButtons
+            'dashboardData' => [
+                'text' => HtmlHelper::getSafeHtml($siteInfo->siteIntroText),
+                'buttons' => $siteInfo->siteIntroButtons
+            ]
         ]);
     }
 
-    public function actionEmpty()
+    protected function _getRandomPosts()
     {
-        return $this->inertia('Site/Empty');
+        $entries = Entry::find()->section('post')->limit(8)->orderBy('rand()')->all();
+
+        return array_map(fn($entry) => [
+            'id' => $entry->id,
+            'title' => $entry->title,
+            'url' => $entry->inertiaUrl,
+        ], $entries);
     }
 }
