@@ -30,10 +30,8 @@ class BaseController extends Controller
             'error' => Craft::$app->session->getError(),
         ]);
 
-        // TODO: This does not work with redirects if 'only' was set set on the original page
-        if (!$this->only) {
+        if (!$this->only || Craft::$app->request->getParam('siteInfo')) {
             $siteInfo = GlobalSet::find()->handle('siteInfo')->one();
-
             $inertia->share([
                 'siteInfo' => [
                     'siteName' => $siteInfo->siteName ?? 'Inertia',
