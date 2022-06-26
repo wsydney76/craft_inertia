@@ -3,6 +3,7 @@
 namespace modules\frontend\controllers;
 
 use Craft;
+use craft\helpers\UrlHelper;
 use yii\base\DynamicModel;
 
 class ContactController extends BaseController
@@ -41,6 +42,6 @@ class ContactController extends BaseController
         }
 
         Craft::$app->session->setNotice("Thank you, your message would have been sent, but sorry, this is only a demo...");
-        return Craft::$app->response->redirect('');
+        return Craft::$app->response->redirect(UrlHelper::siteUrl('/', ['full' => 1]));
     }
 }
