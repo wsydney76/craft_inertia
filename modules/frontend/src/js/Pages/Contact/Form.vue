@@ -50,7 +50,10 @@ export default {
     props: {
         title: String,
         message: Object,
-        errors: Array|Object
+        errors: {
+            type: Array|Object,
+            default: () => []
+        }
     },
 
     data() {
@@ -65,7 +68,7 @@ export default {
 
     methods: {
         submit() {
-            this.$inertia.post('contact', this.form, {only: ['formData']})
+            this.$inertia.post('contact', {message: this.form}, {only: ['formData']})
         }
     }
 }

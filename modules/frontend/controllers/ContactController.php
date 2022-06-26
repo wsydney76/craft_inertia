@@ -19,20 +19,14 @@ class ContactController extends BaseController
                 'name' => $user->name ?? '',
                 'email' => $user->email ?? '',
                 'text' => '',
-            ],
-            'errors' => Craft::$app->session->getFlash('errors', [], true)
+            ]
         ]);
     }
 
     public function actionSend()
     {
-        $request = Craft::$app->request;
 
-        $model = DynamicModel::validateData([
-            'name' => $request->getBodyParam('name'),
-            'email' => $request->getBodyParam('email'),
-            'text' => $request->getBodyParam('text')
-        ], [
+        $model = DynamicModel::validateData(Craft::$app->request->getRequiredBodyParam('message'), [
             [['name', 'email', 'text'], 'required'],
             ['name', 'string', 'max' => 30],
             ['email', 'email'],
