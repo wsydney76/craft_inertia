@@ -30,6 +30,7 @@ class BaseController extends Controller
             'error' => Craft::$app->session->getError(),
         ]);
 
+        // TODO: This does not work with redirects if 'only' was set set on the original page
         if (!$this->only) {
             $siteInfo = GlobalSet::find()->handle('siteInfo')->one();
 
