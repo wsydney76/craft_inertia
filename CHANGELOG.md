@@ -9,6 +9,7 @@ This is the **first final version** of this Proof of Concept.
 * Pagination for post index
 * Short install instructions in README
 * Added 'random Posts' as an example for only partially updating a page.
+* Added topics, contact confirmation
 
 ### Changed
 
