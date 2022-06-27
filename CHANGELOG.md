@@ -16,6 +16,7 @@ This is the **first final version** of this Proof of Concept.
 * Minor layout improvements
 * Moved Site Nav to custom config
 * Stop running Craft in headless mode
+* Moved adapter to separate [plugin](https://github.com/wsydney76/inertia)
 
 ### Fixed
 

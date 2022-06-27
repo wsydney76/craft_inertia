@@ -2,7 +2,7 @@
 
 Updated older Proof of Concept for a Vue 2/Inertia app powered by Craft CMS.
 
-Adapter `modules\inertia` based on [Yii2 Adapter](https://www.yiiframework.com/extension/tebe/yii2-inertia).
+Intertia Adapter based on [Yii2 Adapter](https://www.yiiframework.com/extension/tebe/yii2-inertia).
 
 App based on [Demo App](https://pingcrm-yii2.tebe.ch/) (simplified).
 

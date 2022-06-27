@@ -1,8 +1,8 @@
 <?php
 
 use config\Env;
-use modules\inertia\web\Request;
-use craft\web\Response as WebResponse;
+use wsydney76\inertia\web\Request;
+use wsydney76\inertia\web\Response as WebResponse;
 
 return [
     'components' => [

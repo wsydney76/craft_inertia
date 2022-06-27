@@ -61,7 +61,7 @@ export default {
         title: String,
         message: Object,
         errors: {
-            type: Array|Object,
+            type: Array | Object,
             default: () => []
         }
     },
@@ -78,7 +78,13 @@ export default {
 
     methods: {
         submit() {
-            this.$inertia.post('contact', {message: this.form}, {only: ['errors']})
+            this.$inertia.post('contact',
+                {
+                    message: this.form
+                },
+                {
+                    only: ['errors']
+                })
         }
     }
 }
