@@ -17,7 +17,16 @@ class EntryBehavior extends Behavior
         /** @var Entry $entry */
         $entry = $this->owner;
 
-        return UrlHelper::siteUrl('posts/' . $entry->slug);
+        switch ($entry->section->handle) {
+            case 'topic':
+            {
+                return UrlHelper::siteUrl('topics/' . $entry->slug);
+            }
+            default: {
+                return UrlHelper::siteUrl('posts/' . $entry->slug);
+            }
+
+        }
     }
 
     public function getEntryData()
@@ -119,6 +128,9 @@ class EntryBehavior extends Behavior
             }
         }
 
+        $topicsData = [];
+        $topics = $entry->topics->all();
+
         return [
             'id' => $entry->id,
             'title' => $entry->title,
@@ -128,7 +140,12 @@ class EntryBehavior extends Behavior
             'expiryDate' => $entry->expiryDate ? Craft::$app->formatter->asDate($entry->expiryDate) : 'n/a',
             'teaser' => $entry->teaser,
             'featuredImage' => $this->getImageData($entry->featuredImage->one(), $featuredImageTransform, [1024, 640, 480]),
-            'blocks' => $blockData
+            'blocks' => $blockData,
+            'topics' => array_map(fn($entry) => [
+                'id' => $entry->id,
+                'title' => $entry->title,
+                'url' => $entry->inertiaUrl
+            ], $topics)
         ];
     }
 
