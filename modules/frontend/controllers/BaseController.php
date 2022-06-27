@@ -30,19 +30,23 @@ class BaseController extends Controller
             'error' => Craft::$app->session->getError(),
         ]);
 
-        if (!$this->only || Craft::$app->request->getParam('siteInfo')) {
-            $siteInfo = GlobalSet::find()->handle('siteInfo')->one();
+        if (!$this->getOnly()) {
             $inertia->share([
-                'siteInfo' => [
-                    'siteName' => $siteInfo->siteName ?? 'Inertia',
-                    'siteUrl' => UrlHelper::siteUrl('/'),
-                    'mainNav' => Craft::$app->config->custom->siteNav,
-                    'copyright' => $siteInfo->copyright,
-                ]
+                'siteInfo' => $this->getSiteInfo()
             ]);
         }
 
         return true;
+    }
+
+    public function getSiteInfo() {
+        $siteInfo = GlobalSet::find()->handle('siteInfo')->one();
+        return [
+            'siteName' => $siteInfo->siteName ?? 'Inertia',
+            'siteUrl' => UrlHelper::siteUrl('/'),
+            'mainNav' => Craft::$app->config->custom->siteNav,
+            'copyright' => $siteInfo->copyright,
+        ];
     }
 
 }

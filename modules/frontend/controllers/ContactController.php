@@ -41,7 +41,22 @@ class ContactController extends BaseController
             ]);
         }
 
-        Craft::$app->session->setNotice("Thank you, your message would have been sent, but sorry, this is only a demo...");
-        return Craft::$app->response->redirect(UrlHelper::siteUrl('/', ['siteInfo' => 1]));
+        // Do something
+
+        Craft::$app->session->setNotice("Message has been sent");
+        return Craft::$app->response->redirect(UrlHelper::siteUrl('/contact/confirm'));
+    }
+
+    public function actionConfirm()
+    {
+
+        $config = Craft::$app->config->custom;
+
+        return $this->inertia('Contact/Confirm', [
+            'title' => 'Confirmation',
+            'text' => $config->contactConfirmationMessage,
+            'siteInfo' => $this->getSiteInfo(),
+            'continueButtons' => $config->contactConfirmationContinueButtons
+        ]);
     }
 }
