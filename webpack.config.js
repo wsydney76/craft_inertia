@@ -1,6 +1,7 @@
 // webpack.config.js
 const path = require('path');
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const PATHS = {
     source: path.join(__dirname, 'modules/frontend/src/js'),
@@ -37,12 +38,16 @@ module.exports = (env, argv) => {
                 },
                 {
                     test: /\.css$/,
-                    loader: ['style-loader', 'css-loader', 'postcss-loader']
+                    use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
                 }
             ]
         },
         plugins: [
             new VueLoaderPlugin(),
+            new MiniCssExtractPlugin({
+                filename: 'assets/inertia/css/[name].css',
+                chunkFilename: 'assets/inertia/css/[id].css'
+            })
         ]
     };
 };
