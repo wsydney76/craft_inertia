@@ -8,32 +8,33 @@ use modules\frontend\helpers\HtmlHelper;
 
 class SiteController extends BaseController
 {
-    public function actionIndex()
+    public function actionIndex(): array|string
     {
-        $siteInfo = GlobalSet::find()->handle('siteInfo')->one();
-
-        if ($this->only == 'randomPosts') {
-            $entries = Entry::find()->section('post')->limit(6)->orderBy('rand()')->all();
-
+        if ($this->checkOnly('randomPosts')) {
             return $this->inertia('Site/Index', [
-               'randomPosts' =>  array_map(fn($entry) => [
-                   'id' => $entry->id,
-                   'title' => $entry->title,
-                   'url' => $entry->inertiaUrl,
-               ], $entries),
-                'notice' => 'This is an example for partially refreshing the page.'
+                'randomPosts' => $this->_getRandomPosts()
             ]);
         }
 
+        $siteInfo = GlobalSet::find()->handle('siteInfo')->one();
+
         return $this->inertia('Site/Index', [
             'title' => $siteInfo->siteIntoTitle,
-            'text' => HtmlHelper::getSafeHtml($siteInfo->siteIntroText),
-            'buttons' => $siteInfo->siteIntroButtons
+            'dashboardData' => [
+                'text' => HtmlHelper::getSafeHtml($siteInfo->siteIntroText),
+                'buttons' => $siteInfo->siteIntroButtons
+            ]
         ]);
     }
 
-    public function actionEmpty()
+    protected function _getRandomPosts(): array
     {
-        return $this->inertia('Site/Empty');
+        $entries = Entry::find()->section('post')->limit(8)->orderBy('rand()')->all();
+
+        return array_map(static fn($entry) => [
+            'id' => $entry->id,
+            'title' => $entry->title,
+            'url' => $entry->inertiaUrl,
+        ], $entries);
     }
 }

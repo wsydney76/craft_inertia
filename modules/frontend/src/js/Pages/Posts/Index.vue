@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <div class="mb-8">
+        <div class="mb-8" v-if="showSearch">
             <form @submit.prevent="search">
                 <input type="text" v-model="form.q" class="input">
                 <button class="btn" type="submit">Search</button>
@@ -13,42 +13,33 @@
             {{ pageInfo }}
         </div>
 
-        <div class="bg-white rounded shadow overflow-x-auto">
-            <table class="w-full whitespace-no-wrap">
-                <tr class="text-left font-bold border-t">
-                    <th class="px-6 pt-6 pb-4">Title</th>
-                </tr>
-                <tr v-for="entry in entries" :key="entry.id" class="hover:bg-gray-100 focus-within:bg-gray-100">
-                    <td class="border-t">
-                        <inertia-link class="px-6 py-4 flex items-center focus:text-brand-500"
-                                      :href="entry.url">
-                            {{ entry.title }}
-                        </inertia-link>
-                    </td>
+        <EntryList :entries="entries"/>
 
-                </tr>
-                <tr v-if="entries.length === 0">
-                    <td class="border-t px-6 py-4" colspan="4">No posts found.</td>
-                </tr>
-            </table>
-        </div>
     </div>
 </template>
 
 <script>
 
 import Layout from '@/Shared/Layout'
+import EntryList from '@/Shared/EntryList'
 
 export default {
     metaInfo() {
         return {title: this.title}
     },
     layout: Layout,
+    components: {
+        EntryList
+    },
     props: {
         title: String,
         entries: Array,
         q: String,
-        pageInfo: String
+        pageInfo: String,
+        showSearch: {
+            type: Boolean,
+            default: true
+        }
     },
 
     data() {

@@ -26,8 +26,11 @@ class AppModule extends Module
                 '' => 'frontend/site/index',
                 'posts' => 'frontend/post/index',
                 'posts/<slug:[^\/]+>' => 'frontend/post/post',
+                'topics' => 'frontend/topic/index',
+                'topics/<slug:[^\/]+>' => 'frontend/topic/topic',
                 'POST contact' => 'frontend/contact/send',
                 'contact' => 'frontend/contact/form',
+                'contact/confirm' => 'frontend/contact/confirm',
                 'empty' => 'frontend/site/empty'
             ]);
         }

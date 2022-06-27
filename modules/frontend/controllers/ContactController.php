@@ -3,6 +3,7 @@
 namespace modules\frontend\controllers;
 
 use Craft;
+use craft\helpers\UrlHelper;
 use yii\base\DynamicModel;
 
 class ContactController extends BaseController
@@ -19,20 +20,14 @@ class ContactController extends BaseController
                 'name' => $user->name ?? '',
                 'email' => $user->email ?? '',
                 'text' => '',
-            ],
-            'errors' => Craft::$app->session->getFlash('errors', [], true)
+            ]
         ]);
     }
 
     public function actionSend()
     {
-        $request = Craft::$app->request;
 
-        $model = DynamicModel::validateData([
-            'name' => $request->getBodyParam('name'),
-            'email' => $request->getBodyParam('email'),
-            'text' => $request->getBodyParam('text')
-        ], [
+        $model = DynamicModel::validateData(Craft::$app->request->getRequiredBodyParam('message'), [
             [['name', 'email', 'text'], 'required'],
             ['name', 'string', 'max' => 30],
             ['email', 'email'],
@@ -40,13 +35,28 @@ class ContactController extends BaseController
         ]);
 
         if ($model->hasErrors()) {
-            Craft::$app->session->setError("Could not send message");
-            Craft::$app->session->setFlash('errors', $model->errors);
-            return Craft::$app->response->redirect('contact');
+            return $this->inertia('Contact/Form', [
+                'error' => "Could not send message",
+                'errors' => $model->errors
+            ]);
         }
 
+        // Do something
 
-        Craft::$app->session->setNotice("Thank you, your message would have been sent, but sorry, this is only a demo...");
-        return Craft::$app->response->redirect('');
+        Craft::$app->session->setNotice("Message has been sent");
+        return Craft::$app->response->redirect(UrlHelper::siteUrl('/contact/confirm'));
+    }
+
+    public function actionConfirm()
+    {
+
+        $config = Craft::$app->config->custom;
+
+        return $this->inertia('Contact/Confirm', [
+            'title' => 'Confirmation',
+            'text' => $config->contactConfirmationMessage,
+            'siteInfo' => $this->getSiteInfo(),
+            'continueButtons' => $config->contactConfirmationContinueButtons
+        ]);
     }
 }

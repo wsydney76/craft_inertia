@@ -15,6 +15,17 @@ class Controller extends \craft\web\Controller
 
     public array|int|bool $allowAnonymous = true;
 
+    private ?string $only = '';
+
+    public function beforeAction($action): bool
+    {
+        if (Craft::$app->request->headers->has('X-Inertia-Partial-Data')) {
+            $this->only = Craft::$app->request->headers->get('X-Inertia-Partial-Data');
+        }
+
+        return true;
+    }
+
     /**
      * @param string $component
      * @param array $params
@@ -66,5 +77,13 @@ class Controller extends \craft\web\Controller
     private function getInertiaVersion(): string
     {
         return Inertia::getInstance()->getVersion();
+    }
+
+    public function checkOnly($key) {
+        return in_array($key, explode(',', $this->only), true);
+    }
+
+    public function getOnly(){
+        return $this->only;
     }
 }
