@@ -1,6 +1,6 @@
 {
     "name": "wsydney76/craft_inertia",
-    "version": "1.5.0",
+    "version": "2.0.0",
     "description": "Inertia proof of concept",
     "license": "Unlicense",
     "require": {
@@ -8,7 +8,6 @@
         "doublesecretagency/craft-cpcss": "2.5.0",
         "fakerphp/faker": "^1.15",
         "leowebguy/mix-manifest": "^1.0",
-        "tebe/yii2-inertia": "^1.0",
         "wsydney76/elementmap": "^4.0.6",
         "wsydney76/inertia": "^1.0"
     },
