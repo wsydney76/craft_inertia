@@ -34,7 +34,7 @@ class SiteController extends BaseController
         return array_map(static fn($entry) => [
             'id' => $entry->id,
             'title' => $entry->title,
-            'url' => $entry->inertiaUrl,
+            'url' => $entry->siteUrl,
         ], $entries);
     }
 }

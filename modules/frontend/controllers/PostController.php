@@ -37,7 +37,7 @@ class PostController extends BaseController
             'entries' => array_map(fn($entry) => [
                 'id' => $entry->id,
                 'title' => $entry->title,
-                'url' => $entry->inertiaUrl
+                'url' => $entry->siteUrl
             ], $paginator->getPageResults()),
         ]);
     }
@@ -63,8 +63,8 @@ class PostController extends BaseController
         return $this->render('Posts/Post', [
             'title' => $entry['title'],
             'entry' => $entry->getEntryData(),
-            'nextUrl' => $nextEntry ? $nextEntry->getInertiaUrl() : '',
-            'prevUrl' => $prevEntry ? $prevEntry->getInertiaUrl() : ''
+            'nextUrl' => $nextEntry ? $nextEntry->getsiteUrl() : '',
+            'prevUrl' => $prevEntry ? $prevEntry->getsiteUrl() : ''
         ]);
     }
 

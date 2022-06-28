@@ -25,7 +25,7 @@ class TopicController extends BaseController
             'entries' => array_map(fn($entry) => [
                 'id' => $entry->id,
                 'title' => $entry->title,
-                'url' => $entry->inertiaUrl
+                'url' => $entry->siteUrl
             ], $entries),
             'showSearch' => false
         ]);
@@ -50,7 +50,7 @@ class TopicController extends BaseController
             'entries' => array_map(fn($entry) => [
                 'id' => $entry->id,
                 'title' => $entry->title,
-                'url' => $entry->inertiaUrl
+                'url' => $entry->siteUrl
             ], $entries),
             'showSearch' => false
         ]);
