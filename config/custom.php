@@ -3,14 +3,10 @@
 use craft\helpers\UrlHelper;
 
 return [
-    'frontendView' => 'frontend/inertia.twig',
     'siteNav' => [
         ['label' => 'Posts', 'url' => '/posts'],
         ['label' => 'Topics', 'url' => '/topics'],
         ['label' => 'Contact', 'url' => '/contact'],
-    ],
-    'assetDirs' => [
-        '@webroot/assets/inertia'
     ],
     'contactConfirmationContinueButtons' => [
         [

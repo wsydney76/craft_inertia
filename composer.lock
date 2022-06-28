@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7b1b741456ddaacc2e1f4730a5ac983f",
+    "content-hash": "537185718292d6386f801f245896569d",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -6330,22 +6330,15 @@
         },
         {
             "name": "wsydney76/inertia",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/wsydney76/inertia.git",
-                "reference": "a8df285c3ac4735099821fa6d41965ec64a5c3dc"
-            },
+            "version": "1.0.0",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/wsydney76/inertia/zipball/a8df285c3ac4735099821fa6d41965ec64a5c3dc",
-                "reference": "a8df285c3ac4735099821fa6d41965ec64a5c3dc",
-                "shasum": ""
+                "type": "path",
+                "url": "e:/craft/plugins4/plugins/inertia",
+                "reference": "a8df285c3ac4735099821fa6d41965ec64a5c3dc"
             },
             "require": {
                 "craftcms/cms": "^4.0.5"
             },
-            "default-branch": true,
             "type": "craft-plugin",
             "extra": {
                 "name": "Inertia",
@@ -6360,7 +6353,6 @@
                     "wsydney76\\inertia\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6372,17 +6364,18 @@
             ],
             "description": "Craft Inertia Adapter PoC",
             "keywords": [
-                "Craft",
                 "cms",
+                "craft",
                 "craftcms",
                 "inertia"
             ],
             "support": {
                 "docs": "https://github.com/wsydney76/inertia/blob/master/README.md",
-                "issues": "https://github.com/wsydney76/inertia/issues",
-                "source": "https://github.com/wsydney76/inertia/tree/master"
+                "issues": "https://github.com/wsydney76/inertia/issues"
             },
-            "time": "2022-06-27T15:35:03+00:00"
+            "transport-options": {
+                "relative": false
+            }
         },
         {
             "name": "yiisoft/yii2",
@@ -7214,7 +7207,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "wsydney76/inertia": 20,
         "craftcms/rector": 20
     },
     "prefer-stable": true,
