@@ -20,7 +20,7 @@ class TopicController extends BaseController
             ->all();
 
 
-        return $this->inertia('Posts/Index', [
+        return $this->render('Posts/Index', [
             'title' => 'Topics',
             'entries' => array_map(fn($entry) => [
                 'id' => $entry->id,
@@ -45,7 +45,7 @@ class TopicController extends BaseController
             ->topics($entry)
             ->all();
 
-        return $this->inertia('Posts/Index', [
+        return $this->render('Posts/Index', [
             'title' => "Topic {$entry->title}",
             'entries' => array_map(fn($entry) => [
                 'id' => $entry->id,

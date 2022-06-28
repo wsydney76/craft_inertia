@@ -11,14 +11,14 @@ class SiteController extends BaseController
     public function actionIndex(): array|string
     {
         if ($this->checkOnly('randomPosts')) {
-            return $this->inertia('Site/Index', [
+            return $this->render('Site/Index', [
                 'randomPosts' => $this->_getRandomPosts()
             ]);
         }
 
         $siteInfo = GlobalSet::find()->handle('siteInfo')->one();
 
-        return $this->inertia('Site/Index', [
+        return $this->render('Site/Index', [
             'title' => $siteInfo->siteIntoTitle,
             'dashboardData' => [
                 'text' => HtmlHelper::getSafeHtml($siteInfo->siteIntroText),

@@ -28,7 +28,7 @@ class PostController extends BaseController
             'currentPage' => $page
         ]);
 
-        return $this->inertia('Posts/Index', [
+        return $this->render('Posts/Index', [
             'title' => 'Posts',
             'q' => $q,
             'nextUrl' => $page < $paginator->totalPages ? UrlHelper::url('/posts', ['page' => $page + 1]) : '',
@@ -60,7 +60,7 @@ class PostController extends BaseController
         $prevEntry = $entry->getPrev(['section' => $entry->section->handle]);
         $nextEntry = $entry->getNext(['section' => $entry->section->handle]);
 
-        return $this->inertia('Posts/Post', [
+        return $this->render('Posts/Post', [
             'title' => $entry['title'],
             'entry' => $entry->getEntryData(),
             'nextUrl' => $nextEntry ? $nextEntry->getInertiaUrl() : '',
