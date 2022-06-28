@@ -39,9 +39,10 @@ export default {
         Blocks
     },
     props: {
+        title: String,
         entry: Object,
         nextUrl: String,
         prevUrl: String
-    }
+    },
 }
 </script>

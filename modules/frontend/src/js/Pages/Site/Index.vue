@@ -1,5 +1,11 @@
 <template>
     <div>
+
+        <inertia-head>
+            <title>Your page title</title>
+            <meta name="description" content="Your page description">
+        </inertia-head>
+
         <div class="mb-8" v-html="dashboardData.text"></div>
 
         <inertia-link v-for="button in dashboardData.buttons"
@@ -27,6 +33,7 @@
 <script>
 
 import Layout from '@/Shared/Layout'
+import { Head } from '@inertiajs/inertia-vue3'
 
 export default {
     layout: Layout,

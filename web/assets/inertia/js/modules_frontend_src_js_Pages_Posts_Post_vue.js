@@ -24,6 +24,7 @@ __webpack_require__.r(__webpack_exports__);
     Blocks: _Shared_Blocks__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   props: {
+    title: String,
     entry: Object,
     nextUrl: String,
     prevUrl: String

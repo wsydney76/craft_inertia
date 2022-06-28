@@ -19351,10 +19351,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-_inertiajs_progress__WEBPACK_IMPORTED_MODULE_2__.InertiaProgress.init({
-  // The color of the progress bar.
-  color: '#1E3A8A'
-});
 window.baguetteBox = __webpack_require__(/*! baguettebox.js */ "./node_modules/baguettebox.js/dist/baguetteBox.min.js");
 
 window.initLightBox = function (id) {
@@ -19374,6 +19370,10 @@ var el = document.getElementById("app");
     });
   }
 }).use(_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.plugin).mount(el);
+_inertiajs_progress__WEBPACK_IMPORTED_MODULE_2__.InertiaProgress.init({
+  // The color of the progress bar.
+  color: '#1E3A8A'
+});
 
 /***/ }),
 

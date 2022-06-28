@@ -2,11 +2,6 @@ import {createApp, h} from "vue";
 import {app, plugin} from "@inertiajs/inertia-vue3";
 import {InertiaProgress} from '@inertiajs/progress';
 
-InertiaProgress.init({
-    // The color of the progress bar.
-    color: '#1E3A8A',
-})
-
 window.baguetteBox = require('baguettebox.js');
 
 window.initLightBox = function(id) {
@@ -24,3 +19,9 @@ createApp({
 })
     .use(plugin)
     .mount(el);
+
+
+InertiaProgress.init({
+    // The color of the progress bar.
+    color: '#1E3A8A',
+})
