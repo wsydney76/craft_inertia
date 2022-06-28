@@ -28,12 +28,10 @@
 <script>
 
 import Layout from '@/Shared/Layout'
-import { Head } from '@inertiajs/inertia-vue3'
 
 export default {
     layout: Layout,
     props: {
-        title: String,
         dashboardData: Object,
         randomPosts: Array
     }

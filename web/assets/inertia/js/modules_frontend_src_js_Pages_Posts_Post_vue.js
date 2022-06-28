@@ -292,9 +292,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* TEXT */
     )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), block.type == 'button' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_inertia_link, {
       key: 4,
-      "class": "btn inline-block no-underline",
-      href: block.url,
-      only: ['post']
+      "class": "btn inline-block my-4 no-underline",
+      href: block.url
     }, {
       "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
         return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(block.caption), 1

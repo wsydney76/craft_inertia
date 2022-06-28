@@ -149,7 +149,7 @@ class EntryBehavior extends Behavior
         ];
     }
 
-    protected function getImageData(Asset $image, mixed $transform, $srcset = ''): array
+    protected function getImageData(?Asset $image, mixed $transform, $srcset = ''): array
     {
         if (!$image) {
             return [];

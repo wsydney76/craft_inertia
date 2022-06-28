@@ -12,13 +12,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Shared_Layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Shared/Layout */ "./modules/frontend/src/js/Shared/Layout.vue");
-/* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
-
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   layout: _Shared_Layout__WEBPACK_IMPORTED_MODULE_0__["default"],
   props: {
-    title: String,
     dashboardData: Object,
     randomPosts: Array
   }

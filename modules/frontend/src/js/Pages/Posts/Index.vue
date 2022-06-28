@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <div class="mb-8" v-if="showSearch">
+        <div v-if="showSearch">
             <form @submit.prevent="search">
                 <input type="text" v-model="form.q" class="input">
                 <button class="btn mr-2" type="submit">Search</button>
