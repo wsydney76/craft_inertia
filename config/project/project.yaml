@@ -1,6 +1,6 @@
 assets:
   tempVolumeUid: 35c3b3f5-30e7-4780-9ae1-286ee8bd275e # Temporary Uploads
-dateModified: 1656343844
+dateModified: 1656427545
 elementSources:
   craft\elements\Asset:
     -
@@ -274,6 +274,10 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
   inertia:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  mix-manifest:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0

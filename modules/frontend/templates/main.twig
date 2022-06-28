@@ -11,14 +11,14 @@
     {% if icon %}
         <link rel="icon" href="{{ icon.url }}">
     {% endif %}
-    <link rel="stylesheet" href="{{ url('assets/inertia/css/main.css') }}"></link>
+    <link rel="stylesheet" href="{{ mix('assets/inertia/css/main.css') }}"></link>
 </head>
 
 <body>
 
 <div id="app" data-page="{{ page|json_encode }}"></div>
 
-<script src="/assets/inertia/js/app.js"></script>
+<script src="{{ mix('/assets/inertia/js/app.js') }}"></script>
 
 </body>
 </html>

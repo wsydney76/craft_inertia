@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "537185718292d6386f801f245896569d",
+    "content-hash": "b186e61e2ea14f8d4fb5277a86c62eac",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -2185,6 +2185,69 @@
                 "source": "https://github.com/thephpleague/oauth2-client/tree/2.6.1"
             },
             "time": "2021-12-22T16:42:49+00:00"
+        },
+        {
+            "name": "leowebguy/mix-manifest",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leowebguy/mix-manifest.git",
+                "reference": "c75a149430a7892ef62e7e336e8e22b6ed5fb4d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leowebguy/mix-manifest/zipball/c75a149430a7892ef62e7e336e8e22b6ed5fb4d9",
+                "reference": "c75a149430a7892ef62e7e336e8e22b6ed5fb4d9",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0|^4.0"
+            },
+            "require-dev": {
+                "craftcms/contact-form": "*",
+                "craftcms/ecs": "dev-main",
+                "craftcms/phpstan": "dev-main",
+                "craftcms/rector": "dev-main"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Mix Manifest",
+                "handle": "mix-manifest",
+                "hasCpSection": false,
+                "hasCpSettings": false,
+                "components": {
+                    "mixService": "leowebguy\\mixmanifest\\services\\MixManifestService"
+                },
+                "class": "leowebguy\\mixmanifest\\MixManifest"
+            },
+            "autoload": {
+                "psr-4": {
+                    "leowebguy\\mixmanifest\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Leo",
+                    "homepage": "https://github.com/leowebguy"
+                }
+            ],
+            "description": "A minimal Craft 3 plugin to load assets from mix-manifest.json",
+            "keywords": [
+                "assets",
+                "craftcms",
+                "laravel",
+                "manifest",
+                "mix"
+            ],
+            "support": {
+                "issues": "https://github.com/leowebguy/mix-manifest/issues",
+                "source": "https://github.com/leowebguy/mix-manifest/tree/1.0.1"
+            },
+            "time": "2022-05-09T23:14:00+00:00"
         },
         {
             "name": "mikehaertl/php-shellcommand",
@@ -6334,7 +6397,7 @@
             "dist": {
                 "type": "path",
                 "url": "e:/craft/plugins4/plugins/inertia",
-                "reference": "a8df285c3ac4735099821fa6d41965ec64a5c3dc"
+                "reference": "8e2f6e4ca63e4a4206d928480f9c530e0529a517"
             },
             "require": {
                 "craftcms/cms": "^4.0.5"
