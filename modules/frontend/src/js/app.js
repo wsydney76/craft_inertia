@@ -1,7 +1,7 @@
 import {createApp, h} from "vue";
 import {app, plugin} from "@inertiajs/inertia-vue3";
 import {InertiaProgress} from '@inertiajs/progress';
-import VueMeta from 'vue-meta'
+import { createMetaManager } from 'vue-meta'
 
 InertiaProgress.init({
     // The color of the progress bar.
@@ -17,12 +17,15 @@ window.initLightBox = function(id) {
 const el = document.getElementById("app");
 
 createApp({
+    metaInfo: {
+        titleTemplate: (title) => title ? `${title} - Craft` : 'Craft'
+    },
     render: () =>
         h(app, {
-            initialPage: JSON.parse(app.dataset.page),
+            initialPage: JSON.parse(el.dataset.page),
             resolveComponent: name => import(`@/Pages/${name}`).then(module => module.default),
         }),
 })
     .use(plugin)
-    .use(VueMeta)
+    .use(createMetaManager())
     .mount(el);
