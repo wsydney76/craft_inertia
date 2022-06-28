@@ -29,9 +29,6 @@
 import Layout from '@/Shared/Layout'
 
 export default {
-    metaInfo() {
-        return {title: this.title}
-    },
     layout: Layout,
     props: {
         title: String,

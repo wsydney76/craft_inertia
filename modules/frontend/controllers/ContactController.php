@@ -19,7 +19,7 @@ class ContactController extends BaseController
             'message' => [
                 'name' => $user->name ?? '',
                 'email' => $user->email ?? '',
-                'text' => '',
+                'text' => ''
             ]
         ]);
     }
