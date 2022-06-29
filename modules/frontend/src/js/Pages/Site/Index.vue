@@ -1,5 +1,6 @@
 <template>
     <div>
+
         <div class="mb-8" v-html="dashboardData.text"></div>
 
         <inertia-link v-for="button in dashboardData.buttons"
@@ -29,12 +30,8 @@
 import Layout from '@/Shared/Layout'
 
 export default {
-    metaInfo() {
-        return {title: this.title}
-    },
     layout: Layout,
     props: {
-        title: String,
         dashboardData: Object,
         randomPosts: Array
     }

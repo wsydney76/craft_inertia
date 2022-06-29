@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "537185718292d6386f801f245896569d",
+    "content-hash": "8c55bf1a8bd999d4d987c9fb678ec204",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -678,16 +678,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "4.0.5.2",
+            "version": "4.1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "81b92bea7e446f743306f62ac175096cad547333"
+                "reference": "d2de6f40c4641c1fad126e03af229ac59ab5ef7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/81b92bea7e446f743306f62ac175096cad547333",
-                "reference": "81b92bea7e446f743306f62ac175096cad547333",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/d2de6f40c4641c1fad126e03af229ac59ab5ef7c",
+                "reference": "d2de6f40c4641c1fad126e03af229ac59ab5ef7c",
                 "shasum": ""
             },
             "require": {
@@ -792,7 +792,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2022-06-24T15:17:13+00:00"
+            "time": "2022-06-28T20:18:17+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -1853,16 +1853,16 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v9.18.0",
+            "version": "v9.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "239c9274b8008fb9532ada0899365d1e182f8f9d"
+                "reference": "253cfce2bf469c340d2268bfbc31d4ad446a1fa7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/239c9274b8008fb9532ada0899365d1e182f8f9d",
-                "reference": "239c9274b8008fb9532ada0899365d1e182f8f9d",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/253cfce2bf469c340d2268bfbc31d4ad446a1fa7",
+                "reference": "253cfce2bf469c340d2268bfbc31d4ad446a1fa7",
                 "shasum": ""
             },
             "require": {
@@ -1904,11 +1904,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-06-19T21:41:21+00:00"
+            "time": "2022-06-28T14:33:19+00:00"
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v9.18.0",
+            "version": "v9.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -1954,7 +1954,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v9.18.0",
+            "version": "v9.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -2002,7 +2002,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v9.18.0",
+            "version": "v9.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -2185,6 +2185,69 @@
                 "source": "https://github.com/thephpleague/oauth2-client/tree/2.6.1"
             },
             "time": "2021-12-22T16:42:49+00:00"
+        },
+        {
+            "name": "leowebguy/mix-manifest",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leowebguy/mix-manifest.git",
+                "reference": "c75a149430a7892ef62e7e336e8e22b6ed5fb4d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leowebguy/mix-manifest/zipball/c75a149430a7892ef62e7e336e8e22b6ed5fb4d9",
+                "reference": "c75a149430a7892ef62e7e336e8e22b6ed5fb4d9",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0|^4.0"
+            },
+            "require-dev": {
+                "craftcms/contact-form": "*",
+                "craftcms/ecs": "dev-main",
+                "craftcms/phpstan": "dev-main",
+                "craftcms/rector": "dev-main"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Mix Manifest",
+                "handle": "mix-manifest",
+                "hasCpSection": false,
+                "hasCpSettings": false,
+                "components": {
+                    "mixService": "leowebguy\\mixmanifest\\services\\MixManifestService"
+                },
+                "class": "leowebguy\\mixmanifest\\MixManifest"
+            },
+            "autoload": {
+                "psr-4": {
+                    "leowebguy\\mixmanifest\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Leo",
+                    "homepage": "https://github.com/leowebguy"
+                }
+            ],
+            "description": "A minimal Craft 3 plugin to load assets from mix-manifest.json",
+            "keywords": [
+                "assets",
+                "craftcms",
+                "laravel",
+                "manifest",
+                "mix"
+            ],
+            "support": {
+                "issues": "https://github.com/leowebguy/mix-manifest/issues",
+                "source": "https://github.com/leowebguy/mix-manifest/tree/1.0.1"
+            },
+            "time": "2022-05-09T23:14:00+00:00"
         },
         {
             "name": "mikehaertl/php-shellcommand",
@@ -3509,7 +3572,7 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.0.1",
+            "version": "v3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
@@ -3556,7 +3619,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.0.1"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.0.2"
             },
             "funding": [
                 {
@@ -3659,7 +3722,7 @@
         },
         {
             "name": "symfony/event-dispatcher-contracts",
-            "version": "v3.0.1",
+            "version": "v3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher-contracts.git",
@@ -3718,7 +3781,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.0.1"
+                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.0.2"
             },
             "funding": [
                 {
@@ -3946,16 +4009,16 @@
         },
         {
             "name": "symfony/http-client-contracts",
-            "version": "v3.0.1",
+            "version": "v3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client-contracts.git",
-                "reference": "f7525778c712be78ad5b6ca31f47fdcfd404c280"
+                "reference": "4184b9b63af1edaf35b6a7974c6f1f9f33294129"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/f7525778c712be78ad5b6ca31f47fdcfd404c280",
-                "reference": "f7525778c712be78ad5b6ca31f47fdcfd404c280",
+                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/4184b9b63af1edaf35b6a7974c6f1f9f33294129",
+                "reference": "4184b9b63af1edaf35b6a7974c6f1f9f33294129",
                 "shasum": ""
             },
             "require": {
@@ -4004,7 +4067,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/http-client-contracts/tree/v3.0.1"
+                "source": "https://github.com/symfony/http-client-contracts/tree/v3.0.2"
             },
             "funding": [
                 {
@@ -4020,7 +4083,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-13T20:10:05+00:00"
+            "time": "2022-04-12T16:11:42+00:00"
         },
         {
             "name": "symfony/mailer",
@@ -4979,16 +5042,16 @@
         },
         {
             "name": "symfony/service-contracts",
-            "version": "v3.0.1",
+            "version": "v3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "e517458f278c2131ca9f262f8fbaf01410f2c65c"
+                "reference": "d78d39c1599bd1188b8e26bb341da52c3c6d8a66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/e517458f278c2131ca9f262f8fbaf01410f2c65c",
-                "reference": "e517458f278c2131ca9f262f8fbaf01410f2c65c",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/d78d39c1599bd1188b8e26bb341da52c3c6d8a66",
+                "reference": "d78d39c1599bd1188b8e26bb341da52c3c6d8a66",
                 "shasum": ""
             },
             "require": {
@@ -5041,7 +5104,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/service-contracts/tree/v3.0.1"
+                "source": "https://github.com/symfony/service-contracts/tree/v3.0.2"
             },
             "funding": [
                 {
@@ -5057,7 +5120,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-13T20:10:05+00:00"
+            "time": "2022-05-30T19:17:58+00:00"
         },
         {
             "name": "symfony/string",
@@ -5307,41 +5370,6 @@
                 }
             ],
             "time": "2022-06-20T11:50:59+00:00"
-        },
-        {
-            "name": "tebe/yii2-inertia",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tbreuss/yii2-inertia.git",
-                "reference": "2c8bcb5d4616e3ddffa79a3b6fac9a17fca4e98b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tbreuss/yii2-inertia/zipball/2c8bcb5d4616e3ddffa79a3b6fac9a17fca4e98b",
-                "reference": "2c8bcb5d4616e3ddffa79a3b6fac9a17fca4e98b",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": ">=5.6.0"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "tebe\\inertia\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "The Yii 2 adapter for Inertia.js",
-            "support": {
-                "issues": "https://github.com/tbreuss/yii2-inertia/issues",
-                "source": "https://github.com/tbreuss/yii2-inertia/tree/master"
-            },
-            "time": "2020-04-30T15:25:22+00:00"
         },
         {
             "name": "theiconic/name-parser",
@@ -6330,11 +6358,17 @@
         },
         {
             "name": "wsydney76/inertia",
-            "version": "1.0.0",
+            "version": "1.1-beta.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wsydney76/inertia.git",
+                "reference": "5ef5a4037edf1aa67973f1f31b97b4836d9330bc"
+            },
             "dist": {
-                "type": "path",
-                "url": "e:/craft/plugins4/plugins/inertia",
-                "reference": "a8df285c3ac4735099821fa6d41965ec64a5c3dc"
+                "type": "zip",
+                "url": "https://api.github.com/repos/wsydney76/inertia/zipball/5ef5a4037edf1aa67973f1f31b97b4836d9330bc",
+                "reference": "5ef5a4037edf1aa67973f1f31b97b4836d9330bc",
+                "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^4.0.5"
@@ -6353,6 +6387,7 @@
                     "wsydney76\\inertia\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6364,18 +6399,17 @@
             ],
             "description": "Craft Inertia Adapter PoC",
             "keywords": [
+                "Craft",
                 "cms",
-                "craft",
                 "craftcms",
                 "inertia"
             ],
             "support": {
                 "docs": "https://github.com/wsydney76/inertia/blob/master/README.md",
-                "issues": "https://github.com/wsydney76/inertia/issues"
+                "issues": "https://github.com/wsydney76/inertia/issues",
+                "source": "https://github.com/wsydney76/inertia/tree/1.1-beta.2"
             },
-            "transport-options": {
-                "relative": false
-            }
+            "time": "2022-06-29T08:36:28+00:00"
         },
         {
             "name": "yiisoft/yii2",

@@ -14,12 +14,12 @@ class ContactController extends BaseController
 
         $user = Craft::$app->user->identity;
 
-        return $this->inertia('Contact/Form', [
+        return $this->render('Contact/Form', [
             'title' => 'Contact',
             'message' => [
                 'name' => $user->name ?? '',
                 'email' => $user->email ?? '',
-                'text' => '',
+                'text' => ''
             ]
         ]);
     }
@@ -35,7 +35,7 @@ class ContactController extends BaseController
         ]);
 
         if ($model->hasErrors()) {
-            return $this->inertia('Contact/Form', [
+            return $this->render('Contact/Form', [
                 'error' => "Could not send message",
                 'errors' => $model->errors
             ]);
@@ -52,7 +52,7 @@ class ContactController extends BaseController
 
         $config = Craft::$app->config->custom;
 
-        return $this->inertia('Contact/Confirm', [
+        return $this->render('Contact/Confirm', [
             'title' => 'Confirmation',
             'text' => $config->contactConfirmationMessage,
             'siteInfo' => $this->getSiteInfo(),
