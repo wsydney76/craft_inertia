@@ -2,7 +2,7 @@
 
 Updated older Proof of Concept for a Vue 2/Inertia app powered by Craft CMS.
 
-Adapter `modules\inertia` based on [Yii2 Adapter](https://www.yiiframework.com/extension/tebe/yii2-inertia).
+Intertia Adapter based on [Yii2 Adapter](https://www.yiiframework.com/extension/tebe/yii2-inertia).
 
 App based on [Demo App](https://pingcrm-yii2.tebe.ch/) (simplified).
 
@@ -12,18 +12,18 @@ Hint: Not all configured sections/fields/block types are covered by the app.
 
 * Updated to Craft 4
 * Updated to Tailwind 3.1
+* Updated to Vue3
+* Changed build process to Laravel Mix
 * Live Preview is now working
-* Added some images/matrix blocks to entry view stub.
-* Added a simple contact form
+* Added blocks to entry view.
+* Added a simple (fake) contact form
 
 ## Todos:
 
 * Security: Check/fix CSRF protection (see in adapter description) and check for possible conflicts with Crafts Control Panel.
 * Remove unused stuff.
-* Clean up build process (Also check for unused components)
 * Redesign layout, now it looks more than an application than a pretty website.
-* Add cache busting for assets
-* Vue 3
+
 
 ## Out of scope
 

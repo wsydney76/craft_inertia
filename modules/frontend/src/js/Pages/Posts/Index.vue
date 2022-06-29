@@ -1,11 +1,11 @@
 <template>
     <div>
 
-        <div class="mb-8" v-if="showSearch">
+        <div v-if="showSearch">
             <form @submit.prevent="search">
                 <input type="text" v-model="form.q" class="input">
-                <button class="btn" type="submit">Search</button>
-                <inertia-link v-if="q" class="" href="posts">Reset</inertia-link>
+                <button class="btn mr-2" type="submit">Search</button>
+                <inertia-link v-if="q" class="" href="/posts">Reset</inertia-link>
             </form>
         </div>
 
@@ -24,9 +24,6 @@ import Layout from '@/Shared/Layout'
 import EntryList from '@/Shared/EntryList'
 
 export default {
-    metaInfo() {
-        return {title: this.title}
-    },
     layout: Layout,
     components: {
         EntryList
@@ -52,7 +49,7 @@ export default {
 
     methods: {
         search() {
-            this.$inertia.get('posts', {q: this.form.q})
+            this.$inertia.get('/posts', {q: this.form.q})
         }
     }
 }

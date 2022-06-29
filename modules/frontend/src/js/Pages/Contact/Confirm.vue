@@ -15,9 +15,6 @@ import Layout from '@/Shared/Layout'
 
 export default {
     name: "Confirm",
-    metaInfo() {
-        return {title: this.title}
-    },
     layout: Layout,
     props: {
         text: String,

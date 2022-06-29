@@ -13,7 +13,7 @@
                     <div v-else>
                         <input id="name" type="text" class="input w-1/2" v-model="form.name">
                     </div>
-                    <div v-if="errors.name" class="text-red-700">
+                    <div v-if="errors && errors.name" class="text-red-700">
                         {{ errors.name[0] }}
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                     <div v-else>
                         <input id="email" type="text" class="input w-1/2" v-model="form.email">
                     </div>
-                    <div v-if="errors.email" class="text-red-700">
+                    <div v-if="errors && errors.email" class="text-red-700">
                         {{ errors.email[0] }}
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                 <div>
                     <label for="text" class="block font-bold">Text</label>
                     <textarea id="text" rows="6" class="input w-1/2" v-model="form.text"></textarea>
-                    <div v-if="errors.text" class="text-red-700">
+                    <div v-if="errors && errors.text" class="text-red-700">
                         {{ errors.text[0] }}
                     </div>
                 </div>
@@ -53,17 +53,11 @@
 import Layout from '@/Shared/Layout'
 
 export default {
-    metaInfo() {
-        return {title: this.title}
-    },
     layout: Layout,
     props: {
         title: String,
         message: Object,
-        errors: {
-            type: Array|Object,
-            default: () => []
-        }
+        errors: Array | Object
     },
 
     data() {
@@ -78,7 +72,13 @@ export default {
 
     methods: {
         submit() {
-            this.$inertia.post('contact', {message: this.form}, {only: ['errors']})
+            this.$inertia.post('/contact',
+                {
+                    message: this.form
+                },
+                {
+                    only: ['errors']
+                })
         }
     }
 }

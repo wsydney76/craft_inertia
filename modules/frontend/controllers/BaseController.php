@@ -5,8 +5,9 @@ namespace modules\frontend\controllers;
 use Craft;
 use craft\elements\GlobalSet;
 use craft\helpers\UrlHelper;
-use modules\inertia\Inertia;
-use modules\inertia\web\Controller;
+
+use wsydney76\inertia\Inertia;
+use wsydney76\inertia\web\Controller;
 use yii\base\InvalidConfigException;
 
 class BaseController extends Controller

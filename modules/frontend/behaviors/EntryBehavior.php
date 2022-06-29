@@ -12,7 +12,7 @@ use yii\base\Behavior;
 class EntryBehavior extends Behavior
 {
 
-    public function getInertiaUrl()
+    public function getSiteUrl()
     {
         /** @var Entry $entry */
         $entry = $this->owner;
@@ -29,7 +29,7 @@ class EntryBehavior extends Behavior
         }
     }
 
-    public function getEntryData()
+    public function getEntryData(): array
     {
 
         /** @var Entry $entry */
@@ -95,7 +95,7 @@ class EntryBehavior extends Behavior
                     if ($target) {
                         $blockData[] = [
                             'type' => 'button',
-                            'url' => $target->getInertiaUrl(),
+                            'url' => $target->getsiteUrl(),
                             'caption' => $block->caption ?: $target->title
                         ];
                     }
@@ -144,12 +144,12 @@ class EntryBehavior extends Behavior
             'topics' => array_map(fn($entry) => [
                 'id' => $entry->id,
                 'title' => $entry->title,
-                'url' => $entry->inertiaUrl
+                'url' => $entry->siteUrl
             ], $topics)
         ];
     }
 
-    protected function getImageData(Asset $image, mixed $transform, $srcset = ''): array
+    protected function getImageData(?Asset $image, mixed $transform, $srcset = ''): array
     {
         if (!$image) {
             return [];

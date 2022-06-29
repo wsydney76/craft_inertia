@@ -19,19 +19,16 @@
 
 use config\Env;
 use modules\frontend\AppModule;
-use modules\inertia\Inertia;
 use modules\main\MainModule;
 
 return [
     'id' => Env::APP_ID,
     'modules' => [
         'main' => MainModule::class,
-        'inertia' => Inertia::class,
         'frontend' => AppModule::class
     ],
     'bootstrap' => [
         'main',
-        'inertia',
         'frontend'
     ]
     /*'components' => [
