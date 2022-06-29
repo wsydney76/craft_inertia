@@ -4,12 +4,12 @@
     "description": "Inertia proof of concept",
     "license": "Unlicense",
     "require": {
-        "craftcms/cms": "4.1.0",
+        "craftcms/cms": "4.1.0.2",
         "doublesecretagency/craft-cpcss": "2.5.0",
         "fakerphp/faker": "^1.15",
         "leowebguy/mix-manifest": "^1.0",
         "wsydney76/elementmap": "^4.0.6",
-        "wsydney76/inertia": "^1.0"
+        "wsydney76/inertia": "^1.1-beta.2"
     },
     "require-dev": {
         "craftcms/rector": "dev-main",
@@ -46,11 +46,5 @@
         ]
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "path",
-            "url": "e:/craft/plugins4/plugins/inertia"
-        }
-    ]
+    "prefer-stable": true
 }
