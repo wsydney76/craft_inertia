@@ -1,5 +1,20 @@
 # Changelog
 
+## 2.0.0 2022-06-29
+
+### Updated
+
+* Vue3 
+* Laravel Mix
+* Craft 4.1
+
+### Removed
+
+* Inertia Progress
+* Vue Head
+
+because both did not work without changes in Vue3.
+
 ## 1.5.x 2022-06-25
 
 This is the **first final version** of this Proof of Concept.
