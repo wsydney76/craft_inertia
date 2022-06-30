@@ -10,7 +10,7 @@ previewTargets:
         - 'Primary entry page'
       -
         - urlFormat
-        - '{inertiaUrl}?id={id}'
+        - '{siteUrl}?id={id}'
       -
         - refresh
         - '1'
